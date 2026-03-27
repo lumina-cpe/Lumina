@@ -1,0 +1,31 @@
+:root {
+    /*Typography*/
+    --text-main: #FFFFFF;
+    --text-inverse: #111111;
+    /*Backgrounds*/
+    --bg-primary-dark: #01182D;
+    --bg-secondary-dark: #000A14;
+    --bg-primary-light: #63c3ff;
+    --bg-secondary-light: #f8f9fa;
+    /*UI-elements*/
+    --ui-box-primary-dark: #DAB900;
+    --ui-box-primary-light: #FFD700;
+    --ui-acent: #9C3E04;
+    /*Assets*/
+    --ui-progress: #44E300;
+    --ui-landscape-dark: #153A06;
+    --ui-landscape-light: #3B8C18;
+    /*Neutral*/
+    --neutral-light-dark: #F8F9FA;
+    --neutral-dark-dark: #111111;
+}
+
+/*Primary-Font*/
+@font-face {
+    font-family: 'Gamer';
+    src: url('assets/fonts/Gamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
