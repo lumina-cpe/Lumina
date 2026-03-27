@@ -1,18 +1,18 @@
-const listeners = {};   // Event-Listener pairing
+const _listeners = {};   // Event-Listener pairing
 
 // Event = Stringified Event, Data Body should be a container (class)
-export function emit(event, dataBody)
+export function eventEmit(event, dataBody)
 {
-    (listeners[event] || []).forEach(listener => {
+    (_listeners[event] || []).forEach(listener => {
         listener(dataBody);
     });
 }
 
 // Event = Stringified Event, Listener should be a function (set or lambda)
 // Returns unsubscribe function
-export function subscribe(event, listener)
+export function eventSubscribe(event, listener)
 {
-    listeners[event] = listeners[event] || [];
-    listeners[event].push(listener);
-    return () => { listeners[event] = listeners[event].filter(oldListener => oldListener !== listener); };
+    _listeners[event] = _listeners[event] || [];
+    _listeners[event].push(listener);
+    return () => { _listeners[event] = _listeners[event].filter(oldListener => oldListener !== listener); };
 }

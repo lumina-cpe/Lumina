@@ -1,6 +1,8 @@
 import { STATE_TYPES } from "../states/StateTypes"
 
-export default function StateRenderer({ state, setState })
+import global_StateManager from "../states/StateManager"
+
+export default function StateRenderer({ state })
 {
     // TODO: implement state components
     switch(state)
