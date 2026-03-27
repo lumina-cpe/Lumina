@@ -1,6 +1,6 @@
-import { STATE_TYPES } from "../states/StateTypes"
+import { STATE_TYPES } from "../states/StateTypes";
 
-import global_StateManager from "../states/StateManager"
+import MenuState from "../states/MenuState";
 
 export default function StateRenderer({ state })
 {
@@ -8,7 +8,7 @@ export default function StateRenderer({ state })
     switch(state)
     {
         case STATE_TYPES.MENU: 
-            return <></>;
+            return <MenuState/>;
         case STATE_TYPES.QUESTIONNAIRE:
             return <></>;
         case STATE_TYPES.GAME:
