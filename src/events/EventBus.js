@@ -9,8 +9,10 @@ export function emit(event, dataBody)
 }
 
 // Event = Stringified Event, Listener should be a function (set or lambda)
+// Returns unsubscribe function
 export function subscribe(event, listener)
 {
     listeners[event] = listeners[event] || [];
     listeners[event].push(listener);
+    return () => { listeners[event] = listeners[event].filter(oldListener => oldListener !== listener); };
 }
