@@ -1,3 +1,5 @@
+import "../../styles/Component_ProgressBar.css"
+
 export default function ProgressBar({ value })
 {
     return (<>

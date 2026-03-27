@@ -1,3 +1,5 @@
+import "../../styles/Component_IconButton.css";
+
 export default function IconButton({ imagePath, callback })
 {
   return (
