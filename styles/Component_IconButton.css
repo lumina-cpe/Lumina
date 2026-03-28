@@ -1,0 +1,23 @@
+.component-icon_button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--ui-accent);
+    margin-right: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+
+    color: var(--text-inverse);
+    background-color: var(--ui-box-primary-light);
+}
+
+.component-icon_button:hover {
+    background-color: var(--ui-box-primary-dark);
+}
+
+.component-icon_button:active {
+    transform: scale(0.96);
+    transition: transform 0.05s ease;
+}

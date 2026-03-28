@@ -1,0 +1,17 @@
+.component-sidebar {
+    position: absolute;
+    top: 200px;
+    left: 60px;
+}
+
+div.component-sidebar button.component-text_button {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+
+}
+
+div.component-sidebar button.component-icon_button {
+    margin-top: 200px;
+}

@@ -1,0 +1,16 @@
+.component-progress_bar-outer {
+   width: 100%;
+    height: 15px;
+    background-color: var(--ui-landscape-dark);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 4px;
+}
+
+.component-progress_bar-inner {
+    height: 8px;
+    background-color: var(--ui-progress);
+    transition: width 0.3s ease-out;
+}

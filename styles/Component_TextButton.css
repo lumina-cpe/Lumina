@@ -1,0 +1,28 @@
+.component-text_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--ui-accent);
+    padding: 0;
+    cursor: pointer;
+    border-radius: 0;
+
+    background-color: var(--ui-box-primary-light);
+    color: var(--text-inverse);
+    width: 260px;
+    height: 60px;
+
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.component-text_button:hover {
+    background-color: var(--ui-box-primary-dark);
+}
+
+.component-text_button:active {
+    transform: scale(0.96);
+    transition: transform 0.05s ease;
+}
