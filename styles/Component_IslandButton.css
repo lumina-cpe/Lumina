@@ -1,0 +1,29 @@
+.component-island {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 2em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    pointer-events: auto;
+    
+    scroll-snap-align: start;
+}
+
+.component-island img {
+    width: 100%;
+    height: auto;
+
+    user-select: none;
+    pointer-events: none;
+    animation: bob 10s ease-in-out infinite;
+}
+
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}

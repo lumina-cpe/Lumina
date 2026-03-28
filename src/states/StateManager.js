@@ -24,5 +24,5 @@ class StateManager
 }
 
 const global_StateManager = new StateManager();
-global_StateManager.setState(STATE_TYPES.QUESTIONNAIRE );
+global_StateManager.setState(STATE_TYPES.MENU);
 export default global_StateManager;
