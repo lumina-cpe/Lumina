@@ -7,7 +7,7 @@ export default function MenuState()
 {
     // CODE HERE
     return (<>
-        <NavigationBar logoPath={"../../assets/images/logo.png"} title={"Lumina: Shedding Light to the World of Computer Engineering"} progress={60}/>
+        <NavigationBar logoPath={"../../assets/images/logo.png"} title={"Lumina: Shedding Light to the World of Computer Engineering"} progress={"20"}/>
         <SideBar />
     </>);
 }
