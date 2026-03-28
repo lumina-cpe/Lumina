@@ -20,6 +20,7 @@
 
 .component-text_button:hover {
     background-color: var(--ui-box-primary-dark);
+    transform: scale(0.99);
 }
 
 .component-text_button:active {
