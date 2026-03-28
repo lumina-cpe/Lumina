@@ -20,9 +20,16 @@
     border-radius: 0 !important;
 
     overflow-x: hidden !important;
+
+    box-shadow: 
+        15px 15px 0px 0px rgba(0, 0, 0, 0.6);
+        inset: 4px 4px 0px 0px rgba(255, 255, 255, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    animation: pixelPopIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)forwards;
 }
-
-
 
 .component-popup_panel > button:first-child {
     position: absolute !important;
@@ -40,6 +47,16 @@
 
 }
 
+.component-popup_panel > button:first-child:hover {
+    background-color: #ff3b1a !important;
+    border-color: #520b03 !important;
+    transform: scale(1.1) !important;
+}
+
+.component-popup_panel > button:first-child:active {
+    transform: scale(0.9) !important;
+}
+
 .component-popup_panel > :nth-child(2) {
     width: 100% !important;
     display: flex !important;
@@ -55,4 +72,26 @@
     color: var(--text-inverse) !important;
     margin: 10px 0 !important;
     text-transform: uppercase !important;
+}
+
+.component-popup_panel p, .component-popup_panel span {
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.8rem !important;           /*Change here for the size of the font inside the pop up*/
+    color: var(--text-inverse) !important;
+    text-align: center;
+    margin: 10px 0 !important;
+}
+
+@keyframes pixelPopIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
