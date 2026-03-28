@@ -1,11 +1,10 @@
 .component-sidebar {
     position: fixed;
-    top: 200px;
-    left: 60px;
-
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     gap: 1em;
+
+    height: 100%;
 }
 
 div.component-sidebar button.component-text_button {
