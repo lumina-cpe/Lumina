@@ -13,6 +13,11 @@
     background-color: var(--ui-box-primary-light);
 }
 
+.component-icon_button img {
+    width: 100%;
+    height: 100%;
+}
+
 .component-icon_button:hover {
     background-color: var(--ui-box-primary-dark);
 }
