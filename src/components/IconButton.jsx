@@ -1,10 +1,7 @@
-import "../../styles/Component_IconButton.css";
-
-export default function IconButton({ imagePath, callback })
-{
-	return (
-		<button className="component-icon_button" onClick={callback}>
-	    	<img src={imagePath} alt="icon" />
-	  	</button>
-	);
+export default function IconButton({ imagePath, onClick }) {
+  return (
+    <button className="component-icon_button" onClick={onClick}>
+      <img src={imagePath} alt="icon" />
+    </button>
+  );
 }

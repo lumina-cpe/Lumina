@@ -1,13 +1,28 @@
-import "../../styles/MenuState.css";
-
-import NavigationBar from "../components/NavigationBar";
 import SideBar from "../components/SideBar";
+import IconButton from "../components/IconButton";
 
-export default function MenuState()
-{
-    // CODE HERE
-    return (<>
-        <NavigationBar logoPath={"../../assets/images/logo.png"} title={"Lumina: Shedding Light to the World of Computer Engineering"} progress={"20"}/>
-        <SideBar />
-    </>);
+export default function MenuState() {
+
+  const handleClick = (name) => {
+    console.log("You clicked " + name);
+  };
+
+  return (
+    <>
+      {/* Sidebar */}
+      <SideBar onItemClick={handleClick} />
+
+      {/* Icon buttons */}
+      <div>
+        <IconButton 
+          imagePath="https://avatars.githubusercontent.com/u/69833152?v=4&size=64"
+          onClick={() => handleClick("ICON1")}
+        />
+        <IconButton 
+          imagePath="https://avatars.githubusercontent.com/u/69833152?v=4&size=64"
+          onClick={() => handleClick("ICON2")}
+        />
+      </div>
+    </>
+  );
 }
