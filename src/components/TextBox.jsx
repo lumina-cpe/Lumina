@@ -1,9 +1,9 @@
 import "../../styles/Component_TextBox.css";
 
-export default function TextBox(text)
+export default function TextBox({ text })
 {
     return (<>
-        <div className={"component-textbox"}>
+        <div className="component-textbox">
             {text}
         </div>
     </>);
