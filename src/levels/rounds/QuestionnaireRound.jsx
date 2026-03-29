@@ -2,8 +2,8 @@ import "../../../styles/QuestionnaireRound.css";
 
 import { useState } from "react";
 
-import TextBox from "../components/TextBox";
-import TextButton from "../components/TextButton";
+import TextBox from "../../components/TextBox";
+import TextButton from "../../components/TextButton";
 
 export default function QuestionnaireRound({ levelHandler })
 {
