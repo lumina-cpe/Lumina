@@ -1,6 +1,6 @@
 import "../../styles/QuestionnaireState.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ProgressBar from "../components/ProgressBar";
 import IconButton from "../components/IconButton";
@@ -10,26 +10,22 @@ import QuestionnaireRound from "./QuestionnaireRound";
 import globalStateManager from "./StateManager";
 import { STATE_TYPES } from "./StateTypes";
 
-// PREIMPORTS
-import r1101 from "../../assets/data/r1101.json";
-import r1102 from "../../assets/data/r1102.json";
-import r1103 from "../../assets/data/r1103.json";
-import r1104 from "../../assets/data/r1103.json";
-import r1105 from "../../assets/data/r1103.json";
-
-const storedRounds = 
-{ 
-    "r1101": r1101, 
-    "r1102": r1102, 
-    "r1103": r1103,
-    "r1104": r1104,
-    "r1105": r1105
-};
+import global_UserData from "../core/UserData";
+import ROUND_DATA from "../core/RoundData";
 
 export default function QuestionnaireState({ levelData })
 {
-    if(levelData.type !== "questionnaire") return <h1>Invalid questionnaire</h1>
+    if(levelData.type !== "questionnaire") return <h1>Invalid questionnaire: {`${levelData}`}</h1>
     const [round, setRound] = useState(0);
+
+    useEffect(() => {
+        if (round >= levelData.rounds_list.length) {
+            global_UserData.incrementLevel();
+            globalStateManager.setState(STATE_TYPES.MENU);
+        }
+    }, [round, levelData.rounds_list.length]);
+
+    if (round >= levelData.rounds_list.length) return null;
 
     return (<>
         <div className="questionnaire-navbar">
@@ -38,6 +34,6 @@ export default function QuestionnaireState({ levelData })
                 globalStateManager.setState(STATE_TYPES.MENU);
             }} />
         </div>
-        <QuestionnaireRound roundData={storedRounds["r" + levelData.rounds_list[round]]} round={round} setRound={setRound} />
+        <QuestionnaireRound roundData={ROUND_DATA["r" + levelData.rounds_list[round]]} round={round} setRound={setRound} />
     </>);
 }

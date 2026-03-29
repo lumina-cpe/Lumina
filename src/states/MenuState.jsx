@@ -6,8 +6,8 @@ import SideBar from "../components/menu_components/MenuSideBar";
 
 import IslandButton from "../components/menu_components/IslandButton";
 
-import global_StateManager from "./StateManager";
-import { STATE_TYPES } from "./StateTypes";
+import global_UserData from "../core/UserData";
+import LEVEL_DATA from "../core/LevelData";
 
 export default function MenuState() {
     useEffect(() => {
@@ -21,16 +21,18 @@ export default function MenuState() {
 
     return (<>
         <SideBar className="freeze" />
-        <NavigationBar className="freeze" logoPath={"../../assets/images/logo.png"} title={"Lumina"} progress={20}/>
+        <NavigationBar className="freeze" logoPath={"../../assets/images/logo.png"} title={"Lumina"} progress={
+            global_UserData.currentLevel > 0 ? (global_UserData.currentLevel / Object.keys(LEVEL_DATA).length) * 100 : 0
+        }/>
         
         <div className="menu-scroll_container">
             <div className="menu-background-gradient"></div>
 
             <div className="menu-island_container">
-                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={20}  scale={100} callback={() => { global_StateManager.setState(STATE_TYPES.QUESTIONNAIRE); }} />
-                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={120} scale={100} callback={() => { global_StateManager.setState(STATE_TYPES.QUESTIONNAIRE); }} />
-                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={220} scale={100} callback={() => { global_StateManager.setState(STATE_TYPES.QUESTIONNAIRE); }} />
-                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={320} scale={100} callback={() => { global_StateManager.setState(STATE_TYPES.QUESTIONNAIRE); }} />
+                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={20}  scale={100} />
+                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={120} scale={100} />
+                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={220} scale={100} />
+                <IslandButton imageSrc={"../../assets/images/island_01.png"} yPos={320} scale={100} />
             </div>
         </div>
     </>);
