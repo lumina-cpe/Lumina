@@ -5,6 +5,8 @@ import { useState } from "react";
 import TextBox from "../../components/TextBox";
 import TextButton from "../../components/TextButton";
 
+import global_UserData from "../../core/UserData";
+
 export default function QuestionnaireRound({ levelHandler })
 {
     const roundData = levelHandler.getCurrentRoundData();
@@ -19,6 +21,7 @@ export default function QuestionnaireRound({ levelHandler })
                     <TextButton key={index} text={choice} callback={() => {
                         levelHandler.setNextRound();
                         levelHandler.pushData(index);
+                        global_UserData.data["island_01-total_points"] = global_UserData.data["island_01-total_points"] + roundData.points[index] || 0;
                     }} />
                 ))}
             </div>
@@ -26,6 +29,10 @@ export default function QuestionnaireRound({ levelHandler })
     }
 
     const [toggledButtons, setToggledButtons] = useState([0, 0, 0, 0]);
+    const points = toggledButtons[0] * roundData.points[0] +
+                   toggledButtons[1] * roundData.points[1] +
+                   toggledButtons[2] * roundData.points[2] +
+                   toggledButtons[3] * roundData.points[3];
     return (<>
         <div className={"round-questionnaire-multiple_selections"}>
             <TextBox className="round-questionnaire-question" text={roundData.question} />
@@ -43,6 +50,7 @@ export default function QuestionnaireRound({ levelHandler })
                 <TextButton text="Submit" callback={() => {
                     levelHandler.setNextRound();
                     levelHandler.pushData(toggledButtons);
+                    global_UserData.data["island_01-total_points"] = global_UserData.data["island_01-total_points"] + points || 0;
                     setToggledButtons([0, 0, 0, 0]);
                 }} />
             </div>}
