@@ -1,32 +1,24 @@
 {
-  "level": 3,
-  "title": "ARTICLE-Scores",
-  "score_descriptions": {
-    "4": "Strongest / most tech-oriented / highly interested / highly collaborative",
-    "3": "Above average interest / capable",
-    "2": "Moderate / average / neutral",
-    "1": "Low / disinterested / avoids tech or teamwork"
-  },
-  "labels": [
-    {
-      "range": "50-65",
-      "title": "Tech Innovator / Creative Thinker",
-      "description": "You are a tech explorer. You are highly passionate about technology. You enjoy solving problems, experimenting, and collaborating. You thrive in creative, fast-paced projects."
-    },
-    {
-      "range": "38-49",
-      "title": "Problem Solver / Developer",
-      "description": "You love tackling challenges. You have strong analytical and tech skills. You work well independently or in teams and are suited for coding, IT, or data-focused roles."
-    },
-    {
-      "range": "25-37",
-      "title": "Supportive Technician / Analyst",
-      "description": "You’re reliable and helpful. You have moderate tech interest and prefer clear guidance. You are reliable in structured tasks and can grow your skills with experience."
-    },
-    {
-      "range": "10-24",
-      "title": "Explorer / Learner",
-      "description": "You’re curious but still learning. You are curious about technology but need more exposure. You may feel hesitant, but this is a good stage to explore and build confidence."
-    }
-  ]
+	"type": "tabbed_article",
+	"options":
+	[
+		"50-65",
+		"38-49",
+		"25-37",
+		"10-24"
+	],
+	"headers":
+	[
+		"Tech Innovator / Creative Thinker",
+		"Problem Solver / Developer",
+		"Supportive Technician / Analyst",
+		"Explorer / Learner"
+	],
+	"contents":
+	[
+		"You are a tech explorer. You are highly passionate about technology. You enjoy solving problems, experimenting, and collaborating. You thrive in creative, fast-paced projects.",
+		"You love tackling challenges. You have strong analytical and tech skills. You work well independently or in teams and are suited for coding, IT, or data-focused roles.",
+		"You’re reliable and helpful. You have moderate tech interest and prefer clear guidance. You are reliable in structured tasks and can grow your skills with experience.",
+		"You’re curious but still learning. You are curious about technology but need more exposure. You may feel hesitant, but this is a good stage to explore and build confidence."
+	]
 }

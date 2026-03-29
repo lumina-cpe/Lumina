@@ -1,4 +1,5 @@
 import QuestionnaireRound from "./rounds/QuestionnaireRound";
+import Island01ArticleRound from "./rounds/Island01ArticleRound";
 
 import CongratulationsRound from "./rounds/CongratulationsRound";
 
@@ -11,13 +12,12 @@ export default function RoundRenderer({ levelHandler })
     // multiple selections round
     // literally everything else
     
-    if(!roundData) return <CongratulationsRound levelHandler={levelHandler} />;
-
     if(roundData.type === "multiple_choices" || roundData.type === "multiple_selections")
         return <QuestionnaireRound levelHandler={levelHandler} />;
     
-    
-    return <h1>Invalid Round</h1>   
+    else if(roundData.type === "island_01-level_03") return <Island01ArticleRound levelHandler={levelHandler} />;
+
+    return <CongratulationsRound levelHandler={levelHandler} />;
 
     // below are the "everything else" rounds
 }
