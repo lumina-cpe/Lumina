@@ -27,3 +27,15 @@
     transform: scale(0.96);
     transition: transform 0.05s ease;
 }
+
+.component-text_button-toggled {
+    background-color: #38a10b;
+    border-color: var(--ui-landscape-dark);
+    color: var(--text-main);
+    transform: scale(0.96);
+}
+
+.component-text_button-toggled:hover {
+    background-color: #44e300;
+    transform: scale(0.96);
+}
