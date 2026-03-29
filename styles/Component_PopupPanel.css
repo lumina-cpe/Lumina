@@ -22,8 +22,9 @@
     overflow-x: hidden !important;
 
     box-shadow: 
+        inset 6px 6px 0px 0px rgba(255, 255, 255, 0.6),
+        inset -6px -6px 0px 0px rgba(0, 0, 0, 0.15),
         15px 15px 0px 0px rgba(0, 0, 0, 0.6);
-        inset: 4px 4px 0px 0px rgba(255, 255, 255, 0.1);
 
     display: flex;
     flex-direction: column;
@@ -90,15 +91,33 @@
 }
 
 @keyframes pixelPopIn {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0;}
+    70% { transform: translate(-50%, -50%) scale(1); opacity: 1;}
+    100% { transform: translate(-50%, -50%) scale(1);}
+}
+
+@media (max-width: 600px) {
+    .component-popup_panel {
+        width: 90vw !important;
+        height: auto !important;
+        min-height: 300px !important;
+
+        box-shadow: 
+            inset 4px 4px 0px 0px rgba(255, 255, 255, 0.6),
+            inset -4px -4px 0px 0px rgba(0, 0, 0, 0.15),
+            8px 8px 0px 0px rgba(0, 0, 0, 0.6);
     }
-    70% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
+
+    .component-popup_panel > :nth-child(2) {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
-    100% {
-        transform: translate(-50%, -50%) scale(1);
+
+    .component-popup_panel h1 {
+        font-size: 2rem !important;
+    }
+
+    .component-popup_panel p, .component-popup_panel span {
+        font-size: 1.2rem !important;
     }
 }

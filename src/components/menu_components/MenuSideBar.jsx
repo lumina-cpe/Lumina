@@ -30,7 +30,7 @@ export default function SideBar() {
                     {isMobile ? (
                         <>
                             <IconButton
-                                imagePath="../../assets/svgs/achivement_icon.svg"
+                                imagePath="../../assets/svgs/achievement_icon.svg"
                                 callback={() => setActivePanel("achievements")}
                             />
                             <IconButton
