@@ -9,7 +9,7 @@
     align-items: center;
     padding: 0 40px;
     gap: 20px;
-    flex-wrap: wrap; /* allow wrapping */
+    flex-wrap: nowrap; /* allow wrapping */
     z-index: 100;
 }
 
@@ -32,18 +32,26 @@
 
 /* Progress Bar */
 .component-progress_bar-outer {
-    flex: 1;               /* take remaining space */
-    min-width: 150px;      /* prevent it from shrinking too much */
+    width: 300px;
+    max-width: 40vw;      /* prevent it from shrinking too much */
     height: 10px;
-    background-color: #ccc;
+    
+    background-color: var(--ui-landscape-dark);
     border-radius: 5px;
     overflow: hidden;
+
+    align-items: center;
+}
+
+.component-navigation_bar .component-progress_bar-outer {
+    margin-left: auto; /* push to the right */
 }
 
 .component-progress_bar-inner {
     height: 100%;
     background-color: #4caf50;
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 /* Small screens: stack title + progress bar, hide logo */
