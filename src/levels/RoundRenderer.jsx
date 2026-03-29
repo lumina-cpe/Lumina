@@ -1,5 +1,7 @@
 import QuestionnaireRound from "./rounds/QuestionnaireRound";
 
+import CongratulationsRound from "./rounds/CongratulationsRound";
+
 export default function RoundRenderer({ levelHandler })
 {
     const roundData = levelHandler.getCurrentRoundData();
@@ -11,6 +13,8 @@ export default function RoundRenderer({ levelHandler })
     
     if(roundData.type === "multiple_choices" || roundData.type === "multiple_selections")
         return <QuestionnaireRound levelHandler={levelHandler} />;
+
+    return <CongratulationsRound levelHandler={levelHandler} />;
 
     // below are the "everything else" rounds
 }
