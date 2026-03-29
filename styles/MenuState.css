@@ -20,13 +20,15 @@
     left: 0;
     width: 100%;
     height: 500vh;
+    
     background: linear-gradient(180deg, 
-      #4287f5 0%, 
-      #73a9ff 15%, 
-      #8a9cba 40%, 
-      #d6b767 65%, 
-      #fffd96 90%);
-    z-index: 0;
+      var(--sky-1) 0%, 
+      var(--sky-2) 15%, 
+      var(--sky-3) 40%, 
+      var(--sky-4) 65%, 
+      var(--sky-5) 90%);
+    
+      z-index: 0;
 }
 
 .menu-island_container {

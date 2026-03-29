@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-:root {
+:root 
+{
     /*Typography*/
     --text-main: #FFFFFF;
     --text-inverse: #111111;
@@ -20,34 +21,64 @@
     /*Neutral*/
     --neutral-light-dark: #F8F9FA;
     --neutral-dark-dark: #111111;
+
+    /*Dynamic sky gradient: Night Time*/
+    --sky-1: #000b18;
+    --sky-2: #01182d;
+    --sky-3: #0a2e50;
+    --sky-4: #251b3d;
+    --sky-5: #3a102a;
 }
 
-/*Primary-Font*/
-@font-face {
-    font-family: 'Gamer';
-    src: url('assets/fonts/Gamer.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@media (prefers-color-scheme: light) {
-    :root{
+@media (prefers-color-scheme: light) 
+{
+    :root
+    {
         --bg-primary-dark: var(--bg-primary-light);
         --bg-secondary-dark: var(--bg-secondary-light);
         --ui-landsape-dark: var(--ui-landscape-light);
         --ui-box-primary-dark: var(--ui-box-primary-light);
         --text-main: #111111;
         --text-inverse: #FFFFFF;
+
+        --sky-1: #4287f5;
+        --sky-2: #73a9ff;
+        --sky-3: #8a9cba;
+        --sky-4: #d6b767;
+        --sky-5: #fffd96;
     }
 }
 
-[data-theme="dark"] {
+[data-theme="light"] 
+{
+    --bg-primary-dark: var(--bg-primary-light);
+    --bg-secondary-dark: var(--bg-secondary-light);
+    --ui-landsape-dark: var(--ui-landscape-light);
+    --ui-box-primary-dark: var(--ui-box-primary-light);
+    --text-main: #111111;
+    --text-inverse: #FFFFFF;
+
+    --sky-1: #4287f5;
+    --sky-2: #73a9ff;
+    --sky-3: #8a9cba;
+    --sky-4: #d6b767;
+    --sky-5: #fffd96;
+}
+
+[data-theme="dark"] 
+{
     --bg-primary-dark: #01182D;
     --bg-secondary-dark: #000A14;
     --ui-landscape-dark: #153A06;
     --ui-box-primary-dark: #DAB900;
     --text-main: #FFFFFF;
     --text-inverse: #111111;
+
+    --sky-1: #000b18;
+    --sky-2: #01182d;
+    --sky-3: #0a2e50;
+    --sky-4: #251b3d;
+    --sky-5: #3a102a;
 }
 
 *
@@ -57,17 +88,28 @@
     padding: 0;
 }
 
-body {
+/*Primary-Font*/
+@font-face 
+{
+    font-family: 'Gamer';
+    src: url('assets/fonts/Gamer.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body 
+{
    background-color: var(--bg-primary-dark);
    color: var(--text-main);
    font-family: 'VT323', 'Courier New', monospace;
-   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3 {
+h1, h2, h3 
+{
     font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
 }
 
-*,*::before, *::after {
+*,*::before, *::after 
+{
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
