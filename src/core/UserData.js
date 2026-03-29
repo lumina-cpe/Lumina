@@ -5,6 +5,8 @@ class UserData {
     {
         this.currentIsland = currentIsland;
         this.currentLevel = currentLevel;
+
+        this.data = {};
     }
 
     incrementLevel()

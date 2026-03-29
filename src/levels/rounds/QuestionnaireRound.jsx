@@ -43,6 +43,7 @@ export default function QuestionnaireRound({ levelHandler })
                 <TextButton text="Submit" callback={() => {
                     levelHandler.setNextRound();
                     levelHandler.pushData(toggledButtons);
+                    setToggledButtons([0, 0, 0, 0]);
                 }} />
             </div>}
         </div>
