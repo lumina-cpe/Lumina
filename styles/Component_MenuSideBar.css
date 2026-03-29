@@ -32,25 +32,25 @@ div.component-sidebar .component-sidebar-icon_buttons {
 
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* 🔥 THIS IS THE KEY */
-        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
 
-        height: 100vh; /* 🔥 force full height so top & bottom separate */
+        height: 100vh;
     }
 
     div.component-sidebar .component-sidebar-text_buttons {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1em;
     }
 
     div.component-sidebar .component-sidebar-icon_buttons {
         display: flex;
-        flex-direction: column; /* 🔥 stack vertically */
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 1em;
 
-        padding-bottom: 2em; /* keep bottom spacing */
+        padding-bottom: 2em;
     }
 }
