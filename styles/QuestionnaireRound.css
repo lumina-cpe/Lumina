@@ -33,3 +33,77 @@
     min-height: 80px;
     padding: 15px;
 }
+
+@media (max-width: 768px) {
+    .questionnaire-multiple_choices,
+    .questionnaire-multiple_selections {
+        width: 95% !important;
+        gap: 6px !important;
+        top: 60px !important;
+        transform: translateX(-50%) !important;
+
+        padding-bottom: 30px !important;
+    }
+
+    .questionnaire-multiple_choices >:nth-child(2),
+    .questionnaire-multiple_selections >:nth-child(2) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 6px ;
+    }
+
+    .questionnaire-multiple_choices > :first-child,
+    .questionnaire-multiple_selections > :first-child {
+        height: auto !important;
+        min-height: 50px !important;
+        padding: 8px 10px !important;
+        border-width: 3px !important;
+    }
+
+    .questionnaire-multiple_choices > :first-child *,
+    .questionnaire-multiple_selections > :first-child * {
+        font-size: 0.95rem !important;
+        line-height: 0.75 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    .questionnaire-multiple_choices > :nth-child(2) > *,
+    .questionnaire-multiple_selections > :nth-child(2) > * {
+        min-height: 40px ;
+        height: auto;
+        padding: 4px 8px;
+        border-width: 3px;
+    }
+
+    body .questionnaire-multiple_choices > :first-child *,
+    body .questionnaire-multiple_selections > :first-child * {
+        font-size: 18px !important;
+        line-height: 16px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    body .questionnaire-multiple_choices >:nth-child(2) > * *,
+    body .questionnaire-multiple_selections >:nth-child(2) > * * {
+        font-size: 0.85rem ;
+        line-height: 1;
+        margin: 0;
+    } 
+
+    .questionnaire-multiple_selections-submit {
+        margin-top: 0px;
+    }
+
+    .questionnaire-multiple_selections-submit > * {
+        padding: 8px 30px !important;
+        border-width: 3px !important;
+        min-height: 40px !important;
+    }
+
+    body .questionnaire-multiple_selections-submit > * *{
+        font-size: 1.2rem !important;
+    }
+}
