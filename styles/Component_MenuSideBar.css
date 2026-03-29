@@ -23,3 +23,14 @@ div.component-sidebar .component-sidebar-icon_buttons {
     justify-content: start;
     gap: 1em;
 }
+
+@media (max-width: 768px) {
+    .component-sidebar {
+        margin-left: 1em;
+        padding-top: max(120px, 8%);
+    }
+
+    div.component-sidebar .component-sidebar-text_buttons {
+        align-items: center;
+    }
+}
