@@ -10,12 +10,12 @@ import l41 from "../../assets/data/l41.json";
 
 const LEVEL_DATA = 
 {
-    "l11": l11,
-    "l12": l12,
-    "l21": l21,
-    "l22": l22,
-    "l31": l31,
-    "l41": l41
+    "11": l11,
+    "12": l12,
+    "21": l21,
+    "22": l22,
+    "31": l31,
+    "41": l41
 };
 
 export default LEVEL_DATA;

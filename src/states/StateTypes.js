@@ -2,7 +2,6 @@
 export const STATE_TYPES =
 {
     MENU: "menu",
-    QUESTIONNAIRE: "questionnaire",
-    GAME: "game",
+    LEVEL: "level",
     NULL: "null"    // Used for invalid values
 };
