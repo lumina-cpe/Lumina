@@ -57,11 +57,10 @@
 /* Small screens: stack title + progress bar, hide logo */
 @media (max-width: 600px) {
     .component-navigation_bar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 10px 20px;
-        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        height: 80px;
+        padding: 0 20px;
     }
 
     .nav-logo {
@@ -69,10 +68,31 @@
     }
 
     .nav-title {
-        font-size: 3.5rem; /* keep title big */
+        font-size: 2.5rem; /* keep title big */
     }
 
     .component-progress_bar-outer {
-        width: 100%; /* full width */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw; /* full width */
+        height: 8px !important; /* smaller height */
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        max-width: none; /* ignore max-width */
+        display: block; /* make it block to take full width */
+
+    }
+
+    .component-progress_bar-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100% !important;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
     }
 }
