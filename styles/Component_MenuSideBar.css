@@ -24,13 +24,33 @@ div.component-sidebar .component-sidebar-icon_buttons {
     gap: 1em;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .component-sidebar {
         margin-left: 1em;
         padding-top: max(120px, 8%);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* 🔥 THIS IS THE KEY */
+        align-items: center;
+
+        height: 100vh; /* 🔥 force full height so top & bottom separate */
     }
 
     div.component-sidebar .component-sidebar-text_buttons {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 1em;
+    }
+
+    div.component-sidebar .component-sidebar-icon_buttons {
+        display: flex;
+        flex-direction: column; /* 🔥 stack vertically */
+        align-items: center;
+        gap: 1em;
+
+        padding-bottom: 2em; /* keep bottom spacing */
     }
 }

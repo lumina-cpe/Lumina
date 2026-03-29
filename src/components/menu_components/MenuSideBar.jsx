@@ -30,15 +30,15 @@ export default function SideBar() {
                     {isMobile ? (
                         <>
                             <IconButton
-                                imagePath="../../assets/svgs/info_icon.svg"
+                                imagePath="../../assets/svgs/achivement_icon.svg"
                                 callback={() => setActivePanel("achievements")}
                             />
                             <IconButton
-                                imagePath="../../assets/svgs/info_icon.svg"
+                                imagePath="../../assets/svgs/settings_icon.svg"
                                 callback={() => setActivePanel("settings")}
                             />
                             <IconButton
-                                imagePath="../../assets/svgs/info_icon.svg"
+                                imagePath="../../assets/svgs/moresettings_icon.svg"
                                 callback={() => setActivePanel("more-settings")}
                             />
                         </>
