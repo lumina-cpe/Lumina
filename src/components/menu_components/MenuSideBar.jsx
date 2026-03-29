@@ -39,7 +39,7 @@ export default function SideBar() {
                             />
                             <IconButton
                                 imagePath="../../assets/svgs/moresettings_icon.svg"
-                                callback={() => setActivePanel("more-settings")}
+                                callback={() => setActivePanel("about us")}
                             />
                         </>
                     ) : (
@@ -53,8 +53,8 @@ export default function SideBar() {
                                 callback={() => setActivePanel("settings")}
                             />
                             <TextButton
-                                text="More Settings"
-                                callback={() => setActivePanel("more-settings")}
+                                text="About Us"
+                                callback={() => setActivePanel("about us")}
                             />
                         </>
                     )}
@@ -71,10 +71,61 @@ export default function SideBar() {
                     children={<h1>Settings</h1>}
                 />
                 <PopupPanel
-                    isActive={activePanel === "more-settings"}
-                    setActive={setActivePanel}
-                    children={<h1>More Settings</h1>}
-                />
+	                    isActive={activePanel === "about us"}
+	                    setActive={setActivePanel}
+	                    children={
+		                    <div className="component-about_container">
+			                    <h1>About Us</h1>
+
+			                    <div className="component-about_content">
+			                	<section className="component-about_section">
+				                	<h1 className="component-about_subtitle">Introduction to Computer Engineering</h1>
+				                    	<p className="component-about_text">
+						This interactive website simulates the journey of a Computer Engineering student. 
+						It converts the official curriculum into islands, levels, and rounds to help incoming freshmen 
+						understand what they will study before they even begin their first class.
+					</p>
+				</section>
+
+				<section className="component-about_section">
+					<h1 className="component-about_subtitle">Islands, Levels, and Rounds</h1>
+					<p className="component-about_text">
+						Each island gives an interactive experience to introduce Computer Engineering. Levels correspond to subjects, 
+						and rounds represent learning activities such as quizzes, design tasks, and logic challenges 
+						that mirror real academic experiences.
+					</p>
+				</section>
+
+				<section className="component-about_section">
+					<h1 className="component-about_subtitle">Purpose</h1>
+					<p className="component-about_text">
+						Choosing a degree program can be overwhelming. This project helps future students visualize how topics 
+						connect, what skills they will gain, and how their knowledge progresses throughout four years.
+					</p>
+				</section>
+
+				<section className="component-about_section">
+					<h1 className="component-about_subtitle">What Makes This Unique</h1>
+					<ul className="component-about_list">
+						<li>Curriculum presented as an interactive game</li>
+						<li>Problem-solving rounds based on real topics</li>
+						<li>Progression system tied to learning flow</li>
+						<li>Responsive, modular component architecture</li>
+						<li>Built following SRP principles</li>
+					</ul>
+				</section>
+
+				<section className="component-about_section">
+					<h1 className="component-about_subtitle">For Future CPE Students</h1>
+					<p className="component-about_text">
+						This is more than a website. It is a preview of the mindset, logic, creativity, and technical 
+						thinking required in Computer Engineering.
+					</p>
+				</section>
+			</div>
+		</div>
+	}
+/>
 
                 <div className="component-sidebar-icon_buttons">
                     <IconButton

@@ -121,3 +121,71 @@
         font-size: 1.2rem !important;
     }
 }
+.component-about_container
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.component-about_content
+{
+	margin-top: 10px;
+	padding-right: 20px;
+	overflow-y: auto;
+    scrollbar-width: none;
+	max-height: 340px;
+}
+
+.component-about_section
+{
+	margin-bottom: 25px;
+}
+
+.component-about_subtitle
+{
+	font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+	font-size: 1.6rem;
+	color: var(--text-inverse);
+	margin-bottom: 8px;
+	text-transform: uppercase;
+}
+
+.component-about_text
+{
+	text-align: left !important;
+	line-height: 1.6;
+}
+
+.component-about_list
+{
+	padding-left: 20px;
+	text-align: left;
+	font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+	font-size: 1.6rem;
+	color: var(--text-inverse);
+}
+
+.component-about_list li
+{
+	margin-bottom: 6px;
+}
+
+@media (max-width: 600px)
+{
+	.component-about_content
+	{
+		max-height: 250px;
+		padding-right: 5px;
+	}
+
+	.component-about_subtitle
+	{
+		font-size: 1.2rem;
+	}
+
+	.component-about_list
+	{
+		font-size: 1.2rem;
+	}
+}
