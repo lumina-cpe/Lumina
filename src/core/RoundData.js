@@ -12,6 +12,8 @@ import r1205 from "../../assets/data/r1205.json";
 
 import r1301 from "../../assets/data/r1301.json";
 
+import r2101 from "../../assets/data/r2101.json";
+
 const ROUND_DATA = 
 { 
     "1101": r1101, 
@@ -26,7 +28,9 @@ const ROUND_DATA =
     "1204": r1204,
     "1205": r1205,
 
-    "1301": r1301
+    "1301": r1301,
+
+    "2101": r2101
 };
 
 export default ROUND_DATA;

@@ -1,0 +1,195 @@
+.round-puzzle_wrapper
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.round-slots_container
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.round-pool_container
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.round-cards_grid
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.round-puzzle_card
+{
+    background-color: var(--bg-primary-dark);
+    color: var(--text-main);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 2px solid var(--ui-accent);
+    cursor: pointer;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    animation: round-card_pop_in 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.round-puzzle_card:hover
+{
+    background-color: var(--sky-3);
+    transform: translateY(-2px);
+}
+
+.round-slot_empty
+{
+    background-color: var(--bg-secondary-dark);
+    color: var(--neutral-light-dark);
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 2px dashed var(--neutral-light-dark);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+    cursor: default;
+    animation: round-card_pop_in 0.2s ease forwards;
+}
+
+.round-card_pre
+{
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.round-submit_button
+{
+    background-color: var(--ui-box-primary-light);
+    color: var(--text-inverse);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    align-self: flex-start;
+}
+
+.round-submit_button:hover
+{
+    background-color: var(--ui-box-primary-dark);
+}
+
+.round-submit_button:active
+{
+    transform: scale(0.98);
+}
+
+.round-error_effect
+{
+    animation: round-shake_animation 0.5s ease;
+    border-color: var(--ui-accent);
+    box-shadow: 0 0 12px var(--ui-accent);
+}
+
+.round-success_panel
+{
+    background-color: var(--bg-primary-dark);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--ui-progress);
+    margin-top: 1rem;
+    animation: round-slide_up_fade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.round-success_title
+{
+    color: var(--text-main);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.round-success_message
+{
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+@keyframes round-card_pop_in
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes round-shake_animation
+{
+    0%, 100% 
+    { 
+        transform: translateX(0); 
+    }
+    20%, 60% 
+    { 
+        transform: translateX(-6px); 
+    }
+    40%, 80% 
+    { 
+        transform: translateX(6px); 
+    }
+}
+
+@keyframes round-slide_up_fade
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px)
+{
+    .round-puzzle_wrapper
+    {
+        flex-direction: column;
+    }
+    
+    .round-slots_container, .round-pool_container
+    {
+        width: 100%;
+    }
+}

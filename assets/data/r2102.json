@@ -1,0 +1,25 @@
+{
+    "type": "island_02-level_01",
+    "pieces":
+    [
+        "START\nscore = 0",
+        "FOR each answer\n\tscore = score + points\nEND FOR",
+        "IF score in range THEN\n\tdisplay matching title\nEND IF",
+        "END"
+    ],
+    "initial_order":
+    [
+        2,
+        1,
+        0,
+        3
+    ],
+    "correct_order":
+    [
+        0,
+        1,
+        2,
+        3
+    ],
+    "message": "The program adds up the points from all your answers. After getting the total score, it checks which score range you fall into, then shows the title and description that best match your result."
+}
