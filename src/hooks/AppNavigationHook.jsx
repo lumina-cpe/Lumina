@@ -7,14 +7,14 @@ import { STATE_EVENTS } from "../states/StateEvent";
 
 export default function useAppNavigationHook()
 {
-    const [ currentState, setCurrentState ]  = useState(global_StateManager.getState());
+    const [ currentStateInfo, setCurrentStateInfo ]  = useState([ global_StateManager.getState(), global_StateManager.getData() ]);
 
     useEffect(() => {
         const unsubscribe = eventSubscribe(STATE_EVENTS.StateChangeEvent, (stateChangeEventData) =>
         {
-            setCurrentState(stateChangeEventData.newState);
+            setCurrentStateInfo([stateChangeEventData.newState, stateChangeEventData.data]);
         });
         return unsubscribe;
     }, []);
-    return currentState;
+    return currentStateInfo;
 }

@@ -11,7 +11,7 @@ import { STATE_TYPES } from "./states/StateTypes"
 
 export default function App() 
 {
-	const state = useAppNavigationHook();
+	const stateInfo = useAppNavigationHook();
 
-	return <StateRenderer state={state} />;
+	return <StateRenderer state={stateInfo[0]} data={stateInfo[1]} />;
 }

@@ -5,8 +5,9 @@ export const STATE_EVENTS =
 
 export class StateChangeEvent
 {
-    constructor(newState)
+    constructor(newState, data = {})
     {
         this.newState = newState;
+        this.data = data;
     }
 }

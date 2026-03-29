@@ -8,18 +8,25 @@ class StateManager
     constructor()
     {
         this._state = STATE_TYPES.NULL;
+        this._data = {};
     }
 
-    setState(newState)
+    setState(newState, newData = {})
     {
         if(!newState || newState === STATE_TYPES.NULL) return;
         this._state = newState;
-        eventEmit(STATE_EVENTS.StateChangeEvent, new StateChangeEvent(newState));
+        this._data = { ...newData };
+        eventEmit(STATE_EVENTS.StateChangeEvent, new StateChangeEvent(newState, this._data));
     }
 
     getState()
     {
         return this._state;
+    }
+
+    getData()
+    {
+        return this._data;
     }
 }
 
