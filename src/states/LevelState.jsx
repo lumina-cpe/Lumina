@@ -14,8 +14,10 @@ export default function LevelState({ levelData })
     const [roundFinished, setRoundFinished] = useState(0);
     const levelHandler = new LevelHandler(levelData, roundFinished, setRoundFinished);
 
-    return (<>
-        <LevelNavigationBar progress={ ( roundFinished / levelData.rounds_list.length ) * 100 }/>
-        <RoundRenderer className="level-round_renderer" levelHandler={ levelHandler }  setRoundFinished={ setRoundFinished }/>
-    </>);
+    return (
+        <div className="level-container">
+            <LevelNavigationBar className="level-navigation_bar" progress={ ( roundFinished / levelData.rounds_list.length ) * 100 }/>
+            <RoundRenderer className="level-round_renderer" levelHandler={ levelHandler }  setRoundFinished={ setRoundFinished }/>
+        </div>
+    );
 }
