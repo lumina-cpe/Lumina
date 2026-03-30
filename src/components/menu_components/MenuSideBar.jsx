@@ -39,7 +39,7 @@ export default function SideBar() {
 
     return (
       <TextButton
-        text={theme === "dark" ? "Dark 🌙" : "Light ☀️"}
+        text={theme === "dark" ? "Dark" : "Light"}
         callback={toggleTheme}
         toggled={theme === "dark"}
       />
