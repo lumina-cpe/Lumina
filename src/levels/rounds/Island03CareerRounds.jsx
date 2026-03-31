@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import PopupPanel from "../../components/PopupPanel";
 import TextButton from "../../components/TextButton";
-import careerData from "../../../assets/data/r3201.json";
-import careerRoomBg from "/assets/images/backgrounds/career_room.png";
+import careerData from "../../assets/data/r3201.json";
+import careerRoomBg from "../../assets/images/backgrounds/career_room.png";
 
 // Career icons (root/assets/images/careers)
 const careerIcons = [
