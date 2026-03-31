@@ -21,9 +21,14 @@ class UserData
         this.currentLevel++;
     }
 
+    getCurrentLevelData()
+    {
+        return LEVEL_DATA[`${this.currentIsland}${this.currentLevel}`];
+    }
+
     isNextLevelAvailable() 
     {
-        return LEVEL_DATA[`l${this.currentIsland}${this.currentLevel + 1}`] !== undefined;
+        return LEVEL_DATA[`${this.currentIsland}${this.currentLevel + 1}`] !== undefined;
     }
 
     saveAchievements(newAchievements) 
