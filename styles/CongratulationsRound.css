@@ -177,3 +177,35 @@
         margin-top: 1rem;
     }
 }
+
+@media (max-width: 320px) 
+{
+    .round-congratulations_container 
+    {
+        padding: 0.5rem;
+        gap: 0.5rem;
+        height: 88vh; /* Give a tiny bit more vertical room */
+    }
+
+    .round-congratulations_title 
+    {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .round-congratulations_button 
+    {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .round-congratulations_right 
+    {
+        padding: 1rem;
+    }
+
+    .round-congratulations_subtitle 
+    {
+        font-size: 1.4rem;
+    }
+}
