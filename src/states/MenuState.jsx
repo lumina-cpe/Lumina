@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import "../../styles/MenuState.css";
 
@@ -10,8 +10,11 @@ import MenuParallaxLayer from "../components/menu_components/MenuParallaxLayer";
 import globalUserData from "../core/UserData";
 import levelData from "../core/LevelData";
 
+import IslandPopup from "../components/menu_components/IslandPopup";
+
 export default function MenuState()
 {
+    const [ activePanel, setActivePanel ] = useState(null);
     const scrollContainerRef = useRef(null);
 
     const progressValue = globalUserData.currentLevel > 0
@@ -64,6 +67,8 @@ export default function MenuState()
                         scale={150}
                     />
                 </div>
+
+                <IslandPopup isActive={activePanel === "island"} setActive={setActivePanel}></IslandPopup>
             </div>
         </>
     );
