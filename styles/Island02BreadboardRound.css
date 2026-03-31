@@ -1,78 +1,125 @@
-.round-island02breadboard_round
-{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background: #f2f2f2;
-	overflow: hidden;
+.circuit-level-root {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #0d1117; /* Sleek Dark Theme */
+    font-family: 'Gamer', 'Lucida Console', monospace;
+    color: white;
+    overflow: hidden;
 }
 
-.round-breadboard
-{
-	position: absolute;
-	left: 80px;
-	top: 120px;
-	width: 200px;
-	height: 450px;
-	background: white;
-	border: 2px solid #ccc;
+/* SIDEBAR REWORK */
+.circuit-sidebar {
+    width: 260px;
+    background: #161b22;
+    border-right: 5px solid #f1c40f;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.5);
 }
 
-.round-node
-{
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background: #bbb;
-	transform: translate(-50%, -50%);
+.sidebar-title { 
+    color: #f1c40f; 
+    font-size: 2.2rem; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    letter-spacing: 2px;
+    text-shadow: 3px 3px #000;
 }
 
-.round-draggable
-{
-	position: absolute;
-	cursor: grab;
+.inv-card {
+    background: #f0f0f0;
+    color: #0d1117;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: grab;
+    box-shadow: 6px 6px 0px #30363d;
+    transition: 0.15s ease-out;
+}
+.inv-card:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0px #f1c40f; background: #fff; }
+.inv-card img { width: 45px; }
+.inv-card span { font-size: 1.2rem; font-weight: bold; }
+
+/* MAIN WORKSPACE */
+.circuit-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: radial-gradient(#30363d 1px, transparent 1px);
+    background-size: 30px 30px; /* Grid pattern for engineering look */
 }
 
-.round-icon
-{
-	width: 70px;
-	pointer-events: none;
+.board-container {
+    position: relative;
+    width: 700px; /* Scaled Up */
+    transition: all 0.5s ease;
 }
 
-.round-wire_svg
-{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
+.bb-image { 
+    width: 100%; 
+    height: auto; 
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8)); 
 }
 
-.round-inventory
-{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	display: flex;
-	gap: 10px;
-	background: white;
-	padding: 10px;
-	border: 2px solid #ccc;
+/* COMPONENT POSITIONING (Precise for 700px board) */
+.part {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    filter: drop-shadow(0 0 8px rgba(241, 196, 15, 0.4)); /* Powered-on Glow */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.round-inventory_icon
-{
-	width: 40px;
+.battery      { transform: translate(-260px, -130px); width: 130px; }
+.switch       { transform: translate(-100px, -100px); width: 65px; }
+.resistor     { transform: translate(30px, -100px); width: 65px; }
+.led          { transform: translate(180px, -100px); width: 45px; filter: drop-shadow(0 0 15px #ff0000); }
+.led_2        { transform: translate(180px, 30px); width: 45px; filter: drop-shadow(0 0 15px #ff0000); }
+.buzzer       { transform: translate(-10px, 45px); width: 85px; }
+.push_button  { transform: translate(-160px, 55px); width: 60px; }
+
+/* VICTORY SCREEN */
+.victory-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 17, 23, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
 }
 
-.round-guide
-{
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	width: 260px;
-	background: #fff3cd;
-	border: 2px solid #ffcc00;
-	padding: 12px;
-	font-size: 14px;
+.victory-card {
+    background: #161b22;
+    border: 6px solid #f1c40f;
+    padding: 50px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 0 100px rgba(241, 196, 15, 0.2);
 }
+
+.victory-icon { font-size: 5rem; margin-bottom: 20px; animation: bounce 1s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+.victory-card h1 { font-size: 4rem; color: #f1c40f; margin: 0; text-shadow: 4px 4px #000; }
+.achievement-unlocked { font-size: 1.5rem; color: #2ecc71; text-transform: uppercase; margin-bottom: 30px; }
+
+.explanation-box {
+    background: #0d1117;
+    padding: 20px;
+    border-left: 4px solid #f1c40f;
+    margin-bottom: 30px;
+}
+.explanation-box p { font-size: 1.3rem; line-height: 1.4; color: #c9d1d9; text-align: left; margin: 0; }
+
+.loading-text { color: #8b949e; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
