@@ -26,6 +26,7 @@ export default function RoundRenderer({ levelHandler, onMenuReturn, onNextLevel 
     if (roundData.type === "multiple_choices" || roundData.type === "multiple_selections")
     {
         return <QuestionnaireRound key={roundKey} levelHandler={levelHandler} />;
+    }
     
     // below are the "everything else" rounds
     if(roundData.type === "island_01-level_03") return <Island01ArticleRound key={roundKey} levelHandler={levelHandler} />;
