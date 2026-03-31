@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 import "../../../styles/Island02PuzzleRound.css"
 
+import SOUND_TYPES from "../../utils/SoundTypes";
+import { SOUND_EVENTS, SoundRequestEvent } from "../../utils/SoundEvent";
+import { eventEmit } from "../../events/EventBus";
+
 export default function Island02PuzzleRound({ levelHandler })
 {
     const roundData = levelHandler.getCurrentRoundData();
@@ -58,6 +62,7 @@ export default function Island02PuzzleRound({ levelHandler })
     {
         if (isFinished)
         {
+            eventEmit(SOUND_EVENTS.SoundRequestEvent, new SoundRequestEvent(SOUND_TYPES.BUTTON_CLICKED));
             levelHandler.setNextRound();
             return;
         }
@@ -66,11 +71,13 @@ export default function Island02PuzzleRound({ levelHandler })
         
         if (isCorrect)
         {
+            eventEmit(SOUND_EVENTS.SoundRequestEvent, new SoundRequestEvent(SOUND_TYPES.CORRECT_CLICKED));
             setIsFinished(true);
             setIsError(false);
         }
         else
         {
+            eventEmit(SOUND_EVENTS.SoundRequestEvent, new SoundRequestEvent(SOUND_TYPES.WRONG_CLICKED));
             setIsError(true);
             
             setTimeout(() => 
