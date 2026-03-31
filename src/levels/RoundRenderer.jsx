@@ -4,6 +4,7 @@ import Island02PuzzleRound from "./rounds/Island02PuzzleRound";
 import Island02BreadboardRound from "./rounds/Island02BreadboardRound";
 import CongratulationsRound from "./rounds/CongratulationsRound";
 import Island03CareerRounds from "./rounds/Island03CareerRounds";
+import Island03CoursesRound from "./rounds/Island03CoursesRound";
 
 export default function RoundRenderer({ levelHandler, onMenuReturn, onNextLevel })
 {
@@ -27,10 +28,19 @@ export default function RoundRenderer({ levelHandler, onMenuReturn, onNextLevel 
     {
         return <QuestionnaireRound key={roundKey} levelHandler={levelHandler} />;
     }
-    
-    // below are the "everything else" rounds
-    if(roundData.type === "island_01-level_03") return <Island01ArticleRound key={roundKey} levelHandler={levelHandler} />;
-    if(roundData.type === "island_02-levels") return <Island02PuzzleRound key={roundKey} levelHandler={levelHandler} />;
-    if(roundData.type === "island_02-level_02") return <Island02BreadboardRound key={roundKey} levelHandler={levelHandler} />;
-    if(roundData.type === "island_03_level_02") return <Island03CareerRounds key={roundKey} levelHandler={levelHandler} />;
+
+    if (roundData.type === "island_01-level_03") return <Island01ArticleRound key={roundKey} levelHandler={levelHandler} />;
+    if (roundData.type === "island_02-levels") return <Island02PuzzleRound key={roundKey} levelHandler={levelHandler} />;
+    if (roundData.type === "island_02-level_02") return <Island02BreadboardRound key={roundKey} levelHandler={levelHandler} />;
+    if(roundData.type === "island_03_level_01") return <Island03CoursesRound key={roundKey} levelHandler={levelHandler} />;
+    if (roundData.type === "island_03_level_02") return <Island03CareerRounds key={roundKey} levelHandler={levelHandler} />;
+
+    return (
+        <CongratulationsRound
+            key={roundKey}
+            levelHandler={levelHandler}
+            onMenuReturn={onMenuReturn}
+            onNextLevel={onNextLevel}
+        />
+    );
 }

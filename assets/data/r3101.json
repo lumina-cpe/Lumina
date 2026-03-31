@@ -1,0 +1,190 @@
+{
+    "type": "island_03_level_01",
+    "title": "CpE Roadmap",
+    "years": [
+        {
+            "yearLabel": "First Year",
+            "theme": "Fundamentals",
+            "courses": [
+                {
+                    "title": "Computer Engineering Orientation",
+                    "description": "Introduces the CpE field, career paths, and core expectations. Helps you understand how hardware and software integrate in real systems."
+                },
+                {
+                    "title": "Programming Logic And Design — Lab",
+                    "description": "Teaches you step-by-step problem solving using algorithms and pseudocode. Builds your foundation for writing clear and correct programs."
+                },
+                {
+                    "title": "Discrete Mathematics",
+                    "description": "Covers logic, sets, relations, functions, and counting methods. Forms your mathematical basis for algorithms and digital systems."
+                },
+                {
+                    "title": "Calculus",
+                    "description": "Studies rates of change through derivatives and volume or accumulation through integrals. Helps you model motion, signals, and system behavior."
+                }
+            ]
+        },
+        {
+            "yearLabel": "Second Year",
+            "theme": "Circuits",
+            "courses": [
+                {
+                    "title": "Electrical Circuits For CpE — Lecture & Lab",
+                    "description": "Teaches you to analyze voltage, current, resistance, and power in circuits. You build and measure real circuits in the lab."
+                },
+                {
+                    "title": "Electronic Circuits For CpE — Lecture & Lab",
+                    "description": "Introduces diodes, transistors, and amplifiers. You design and test electronic components in the lab."
+                },
+                {
+                    "title": "Logic Circuits & Design — Lecture & Lab",
+                    "description": "Covers Boolean algebra and digital logic gates. You design combinational and sequential circuits."
+                },
+                {
+                    "title": "Differential Equations",
+                    "description": "Teaches you to solve equations involving rates of change. Essential for modeling circuits and dynamic systems."
+                },
+                {
+                    "title": "Object Oriented Programming — Lab",
+                    "description": "Introduces classes, objects, and modular code design. Helps you write reusable and organized programs."
+                },
+                {
+                    "title": "Data Structures & Algorithm — Lab",
+                    "description": "Teaches you efficient ways to store and process data. Strengthens your problem solving and program performance."
+                },
+                {
+                    "title": "Computer-Aided Drafting — Lab",
+                    "description": "Trains you to use software for creating technical drawings. Develops your precision in engineering visualization."
+                },
+                {
+                    "title": "Computer-Aided Drafting & Design — Lab",
+                    "description": "Extends drafting into full design projects. Emphasizes accuracy and engineering standards in your work."
+                },
+                {
+                    "title": "Engineering Data Analysis — Lecture & Lab",
+                    "description": "Teaches you to apply statistics to interpret engineering data. You analyze measurements and results using tools."
+                }
+            ]
+        },
+        {
+            "yearLabel": "Third Year",
+            "theme": "Systems",
+            "courses": [
+                {
+                    "title": "Numerical Methods & Analysis — Lecture & Lab",
+                    "description": "Teaches you computational techniques to solve complex math problems. You implement solutions through programming and simulations."
+                },
+                {
+                    "title": "Computer Architecture & Organization — Lecture & Lab",
+                    "description": "Explains how CPUs, memory, and hardware components work together. You explore internal computer operations through lab activities."
+                },
+                {
+                    "title": "Operating Systems",
+                    "description": "Teaches you how processes, memory, and files are managed. Explains how software controls hardware resources."
+                },
+                {
+                    "title": "Introduction To H.D.L. — Lab",
+                    "description": "Teaches you hardware description languages for digital design. You simulate and model circuits using code."
+                },
+                {
+                    "title": "Microprocessor & Microcontroller Systems & Design — Lecture & Lab",
+                    "description": "Focuses on programming and interfacing microcontrollers. You build embedded control systems in the lab."
+                },
+                {
+                    "title": "Embedded Systems — Lecture & Lab",
+                    "description": "Guides you in designing systems that combine hardware and software. You create applications involving sensors and real-time control."
+                },
+                {
+                    "title": "Fundamentals Of Mixed Signals & Sensors",
+                    "description": "Explains how analog and digital signals interact. Teaches you how sensors are used in real systems."
+                },
+                {
+                    "title": "Feedback & Control Systems",
+                    "description": "Teaches you system stability and automatic control. You apply mathematics to regulate system behavior."
+                },
+                {
+                    "title": "Data & Digital Communications",
+                    "description": "Covers data transmission, encoding, and networking basics. Helps you understand how devices communicate reliably."
+                },
+                {
+                    "title": "Data Signal Processing — Lecture & Lab",
+                    "description": "Teaches you to process and analyze signals using algorithms. You perform filtering and transformations in the lab."
+                },
+                {
+                    "title": "Engineering Management",
+                    "description": "Introduces you to project planning and team coordination. Focuses on leadership in engineering work."
+                },
+                {
+                    "title": "Engineering Economics",
+                    "description": "Teaches you to apply economic principles to engineering decisions. You evaluate cost, value, and feasibility."
+                },
+                {
+                    "title": "Technopreneurship",
+                    "description": "Encourages you to create innovation and technology-based business ideas. Teaches you how to turn projects into products."
+                },
+                {
+                    "title": "Basic Occupational Safety & Health",
+                    "description": "Teaches you safe practices in laboratories and workplaces. Promotes hazard awareness and prevention."
+                },
+                {
+                    "title": "Methods Of Research (Capstone Design Project 1)",
+                    "description": "Guides you in research planning and proposal writing. Prepares you for your capstone project."
+                },
+                {
+                    "title": "CpE Elective 1",
+                    "description": "Lets you study a specialized topic based on your interest. Expands your knowledge in a focused CpE area."
+                }
+            ]
+        },
+        {
+            "yearLabel": "Fourth Year",
+            "theme": "Internships",
+            "courses": [
+                {
+                    "title": "Computer Networks & Security — Lecture & Lab",
+                    "description": "Teaches you network structures and protection methods. You configure and secure network systems in the lab."
+                },
+                {
+                    "title": "Software Design — Lecture & Lab",
+                    "description": "Focuses on software architecture and development practices. You practice planning, testing, and documentation."
+                },
+                {
+                    "title": "Seminars & Field Trips — Drafting",
+                    "description": "Gives you industry exposure through talks and visits. You document and reflect on these experiences."
+                },
+                {
+                    "title": "Capstone Design Project 2 — Drafting",
+                    "description": "Continues your project development with detailed designs. Focuses on your technical documentation."
+                },
+                {
+                    "title": "Capstone Design Project 3 — Drafting",
+                    "description": "Finalizes and presents your completed project. Demonstrates your integration of CpE knowledge."
+                },
+                {
+                    "title": "CpE Laws & Professional Practice",
+                    "description": "Teaches you ethics, laws, and responsibilities of engineers. Prepares you for professional conduct."
+                },
+                {
+                    "title": "Emerging Technologies In CpE",
+                    "description": "Exposes you to new trends like AI, IoT, and robotics. Keeps you updated with modern advancements."
+                },
+                {
+                    "title": "CpE Elective 2",
+                    "description": "Allows you to explore another specialized CpE topic. Deepens your expertise in an area of interest."
+                },
+                {
+                    "title": "CpE Elective 3",
+                    "description": "Further enhances your specialization. Strengthens your career-specific skills."
+                },
+                {
+                    "title": "On-The-Job Training 1",
+                    "description": "Gives you hands-on training in a real workplace. You apply your classroom knowledge to practical tasks."
+                },
+                {
+                    "title": "On-The-Job Training 2",
+                    "description": "Extends your industry immersion. Develops your professional skills and experience."
+                }
+            ]
+        }
+    ]
+}

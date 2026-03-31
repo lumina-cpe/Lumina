@@ -20,16 +20,19 @@ import r2105 from "../../assets/data/r2105.json";
 
 import r2201 from "../../assets/data/r2201.json";
 
-const ROUND_DATA = 
-{ 
-    "1101": r1101, 
-    "1102": r1102, 
+import r3101 from "../../assets/data/r3101.json";
+import r3201 from "../../assets/data/r3201.json";
+
+const ROUND_DATA =
+{
+    "1101": r1101,
+    "1102": r1102,
     "1103": r1103,
     "1104": r1104,
     "1105": r1105,
 
-    "1201": r1201, 
-    "1202": r1202, 
+    "1201": r1201,
+    "1202": r1202,
     "1203": r1203,
     "1204": r1204,
     "1205": r1205,
@@ -41,8 +44,11 @@ const ROUND_DATA =
     "2103": r2103,
     "2104": r2104,
     "2105": r2105,
-    
+
     "2201": r2201,
+
+    "3101": r3101,
+    "3201": r3201
 };
 
 export default ROUND_DATA;

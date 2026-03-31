@@ -1,0 +1,67 @@
+.round-curriculum_container
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-curriculum_card
+{
+    width: 900px;
+    max-width: 90%;
+    background: #ffd400;
+    border: 4px solid #3a1a00;
+    padding: 32px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.round-curriculum_title
+{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.round-curriculum_content
+{
+    text-align: left;
+    margin-bottom: 24px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.round-curriculum_text
+{
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+.round-curriculum_button_container
+{
+    display: flex;
+    justify-content: center;
+}
+
+.round-curriculum_button
+{
+    padding: 12px 32px;
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+
+    color: #000000;
+}
+
+/* FORCE all text inside card to be black */
+.round-curriculum_card *
+{
+    color: #000000 !important;
+}

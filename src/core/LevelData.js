@@ -6,9 +6,9 @@ import l21 from "../../assets/data/l21.json";
 import l22 from "../../assets/data/l22.json";
 
 import l31 from "../../assets/data/l31.json";
-import l32 from "../../assets/data/l31.json";
+import l32 from "../../assets/data/l32.json";
 
-const LEVEL_DATA = 
+const LEVEL_DATA =
 {
     "11": l11,
     "12": l12,
