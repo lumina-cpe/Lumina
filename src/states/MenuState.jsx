@@ -1,4 +1,5 @@
 import "../../styles/MenuState.css";
+import { useEffect } from "react";
 
 import NavigationBar from "../components/menu_components/MenuNavigationBar";
 import SideBar from "../components/menu_components/MenuSideBar";
@@ -8,7 +9,22 @@ import IslandButton from "../components/menu_components/IslandButton";
 import global_UserData from "../core/UserData";
 import LEVEL_DATA from "../core/LevelData";
 
+const mouseMultiplier = 30;
+
 export default function MenuState() {
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * mouseMultiplier;
+            const y = (e.clientY / window.innerHeight - 0.5) * mouseMultiplier;
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
+
     return (
         <>
             <SideBar className="freeze" />
