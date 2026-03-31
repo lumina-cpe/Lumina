@@ -15,7 +15,7 @@ export default function IslandPopup({ isActive = false, setActive = (val) => {},
 {
     const userCurrentIsland = global_UserData.currentIsland;
     const userCurrentLevel = global_UserData.currentLevel;
-    let progress = userCurrentLevel / global_UserData.getCurrentLevelData().rounds_list.length;
+    let progress = (userCurrentLevel / global_UserData.getCurrentLevelData().rounds_list.length) * 100;
 
     if(!isActive) return <></>;
 

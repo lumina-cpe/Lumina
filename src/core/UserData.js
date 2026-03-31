@@ -29,6 +29,8 @@ class UserData
         setTimeout(() => {
             this._incrementing = false;
         }, 0);
+
+        console.log("user data island, ", this.currentIsland, ", ", this.currentLevel);
     }
 
     getCurrentLevelData()
