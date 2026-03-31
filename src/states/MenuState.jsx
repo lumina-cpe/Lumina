@@ -86,15 +86,6 @@ export default function MenuState()
                         yPos={220}
                         scale={150}
                     />
-
-                    <IslandButton
-                        imageSrc={"../../assets/images/island_0333.png"}
-                        islandID={3}
-                        setActivePanel={setActivePanel}
-                        foregroundSrc={"../../assets/images/foreground.png"}
-                        yPos={320}
-                        scale={150}
-                    />
                 </div>
 
                 <IslandPopup 
