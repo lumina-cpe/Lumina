@@ -24,7 +24,8 @@ export default function QuestionnaireRound({ levelHandler })
                             callback={() =>
                             {
                                 levelHandler.pushData(index);
-                                global_UserData.addIsland01Score(roundData.points[index] || 0);
+                                global_UserData.addIsland01Score(roundData.points?.[index] || 0);
+                                levelHandler.setNextRound();
                             }}
                         />
                     ))}
@@ -79,7 +80,8 @@ export default function QuestionnaireRound({ levelHandler })
 
                         levelHandler.pushData(toggledButtons);
                         global_UserData.addIsland01Score(points || 0);
-                        setToggledButtons([0, 0, 0, 0]);
+                        levelHandler.setNextRound();
+                        setToggledButtons(roundData.options.map(() => 0));
                     }}
                 />
             </div>
