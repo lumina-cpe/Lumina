@@ -26,5 +26,5 @@ class UserData {
     }
 }
 
-const global_UserData = new UserData(1, 2);
+const global_UserData = new UserData(1, 1);
 export default global_UserData;
