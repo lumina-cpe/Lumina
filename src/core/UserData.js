@@ -75,9 +75,5 @@ class UserData
     }
 }
 
-<<<<<<< HEAD
 const global_UserData = new UserData(1, 1);
-=======
-const global_UserData = new UserData(1, 1);
->>>>>>> 17f74ef (<feat>(component)island 3)
 export default global_UserData;
