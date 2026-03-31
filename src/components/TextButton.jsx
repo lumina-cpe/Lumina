@@ -1,10 +1,10 @@
 import "../../styles/Component_TextButton.css";
 
 import useSoundPlayer from "../hooks/UseSoundPlayerHook";
+import SOUND_TYPES from "../utils/SoundTypes";
 
 export default function TextButton({ text, callback, toggled=false }) {
-    const sfx = "../../assets/sfx/button_click_01.mp3";
-    const [ playSFX ] = useSoundPlayer(sfx);
+    const [ playSFX ] = useSoundPlayer(SOUND_TYPES.BUTTON_CLICKED);
 
     const onButtonClick = () => {
         playSFX();
