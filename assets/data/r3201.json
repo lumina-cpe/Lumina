@@ -1,0 +1,103 @@
+{
+  "career_paths": [
+    {
+      "title": "Software Engineer",
+      "description": "I design and develop efficient, reliable computer hardware like processors, circuit boards, and memory devices, for example, building the motherboard for a gaming PC.",
+      "skills_required": ["Java", "Python", "JavaScript", "problem-solving", "algorithms", "debugging", "Git"],
+      "difficulty_level": "High",
+      "salary": {
+        "philippines": "₱35,000 – ₱90,000 / month",
+        "international_usd": "$5,800 – $11,700 / month",
+        "international_php": "₱345,000 – ₱698,000 / month"
+      }
+    },
+    {
+      "title": "Hardware Engineer",
+      "description": "I design and develop efficient, reliable computer hardware like processors, circuit boards, and memory devices, for example, building the motherboard for a gaming PC.",
+      "skills_required": ["Circuit design", "electronics", "PCB design", "microprocessors", "troubleshooting"],
+      "difficulty_level": "High",
+      "salary": {
+        "philippines": "₱30,000 – ₱80,000 / month",
+        "international_usd": "$5,400 – $10,800 / month",
+        "international_php": "₱322,000 – ₱643,000 / month"
+      }
+    },
+    {
+      "title": "Embedded Systems Engineer",
+      "description": "I create software that runs on real-time hardware devices like IoT gadgets or automotive systems, such as programming a smart thermostat.",
+      "skills_required": ["C/C++", "microcontrollers", "RTOS", "hardware-software integration", "debugging"],
+      "difficulty_level": "High",
+      "salary": {
+        "philippines": "₱40,000 – ₱95,000 / month",
+        "international_usd": "$6,700 – $12,500 / month",
+        "international_php": "₱399,000 – ₱745,000 / month"
+      }
+    },
+    {
+      "title": "Network Engineer / Systems Administrator",
+      "description": "I manage computer networks and servers, ensuring secure, uninterrupted connectivity, like maintaining corporate Wi-Fi and servers.",
+      "skills_required": ["Networking", "Linux/Windows servers", "cybersecurity basics", "Cisco", "troubleshooting"],
+      "difficulty_level": "Medium",
+      "salary": {
+        "philippines": "₱25,000 – ₱70,000 / month",
+        "international_usd": "$5,000 – $10,000 / month",
+        "international_php": "₱298,000 – ₱596,000 / month"
+      }
+    },
+    {
+      "title": "Cybersecurity Analyst / Engineer",
+      "description": "I protect systems and networks from evolving cyber threats, such as detecting and stopping ransomware attacks.",
+      "skills_required": ["Network security", "ethical hacking", "encryption", "risk analysis", "security tools"],
+      "difficulty_level": "High",
+      "salary": {
+        "philippines": "₱45,000 – ₱110,000 / month",
+        "international_usd": "$7,500 – $13,300 / month",
+        "international_php": "₱447,000 – ₱793,000 / month"
+      }
+    },
+    {
+      "title": "AI / Machine Learning Engineer",
+      "description": "I develop intelligent, data-driven algorithms, such as recommendation systems for e-commerce platforms.",
+      "skills_required": ["Python", "statistics", "ML algorithms", "data modeling", "neural networks"],
+      "difficulty_level": "Very High",
+      "salary": {
+        "philippines": "₱50,000 – ₱130,000 / month",
+        "international_usd": "$9,200 – $15,800 / month",
+        "international_php": "₱548,000 – ₱941,000 / month"
+      }
+    },
+    {
+      "title": "Data Analyst / Engineer",
+      "description": "I collect and analyze data to produce meaningful insights, like studying customer behavior to improve sales.",
+      "skills_required": ["SQL", "Python/R", "databases", "data visualization", "analytical thinking"],
+      "difficulty_level": "Medium to High",
+      "salary": {
+        "philippines": "₱35,000 – ₱85,000 / month",
+        "international_usd": "$6,200 – $11,700 / month",
+        "international_php": "₱369,000 – ₱698,000 / month"
+      }
+    },
+    {
+      "title": "Robotics Engineer",
+      "description": "I design and program robots for precision tasks, such as a robotic arm for assembling electronics.",
+      "skills_required": ["Robotics", "control systems", "C/C++", "sensors", "mechanical integration"],
+      "difficulty_level": "Very High",
+      "salary": {
+        "philippines": "₱45,000 – ₱120,000 / month",
+        "international_usd": "$7,500 – $14,200 / month",
+        "international_php": "₱447,000 – ₱846,000 / month"
+      }
+    },
+    {
+      "title": "Firmware Engineer",
+      "description": "I write low-level, hardware-aware software that directly interfaces with devices, like firmware for smart wearables.",
+      "skills_required": ["C/C++", "microcontrollers", "hardware protocols", "debugging", "memory management"],
+      "difficulty_level": "High",
+      "salary": {
+        "philippines": "₱40,000 – ₱100,000 / month",
+        "international_usd": "$7,100 – $12,500 / month",
+        "international_php": "₱422,000 – ₱745,000 / month"
+      }
+    }
+  ]
+}

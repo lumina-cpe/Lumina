@@ -11,26 +11,21 @@
     "description": "Complete Island 2 Level 2.",
     "level_id": 22
   },
+  
   {
     "id": "03",
-    "name": "SIGNAL MASTER",
+    "name": "FUTURE CPE???",
     "description": "Complete Island 2 Level 3.",
     "level_id": 23
   },
   {
     "id": "04",
-    "name": "FUTURE CPE???",
-    "description": "Complete Island 2 Level 4.",
-    "level_id": 24
-  },
-  {
-    "id": "05",
     "name": "ROADMAP REVEALED",
     "description": "Complete Island 3 Level 1.",
     "level_id": 31
   },
   {
-    "id": "06",
+    "id": "05",
     "name": "LUMINA AETHERNA: CONVERGENCE OF CODE AND CURRENT",
     "description": "Complete Island 3 Level 2.",
     "level_id": 32
