@@ -1,5 +1,6 @@
 import l11 from "../../assets/data/l11.json";
 import l12 from "../../assets/data/l12.json";
+import l13 from "../../assets/data/l12.json"; // Formality purposes
 
 import l21 from "../../assets/data/l21.json";
 import l22 from "../../assets/data/l22.json";
@@ -11,8 +12,11 @@ const LEVEL_DATA =
 {
     "11": l11,
     "12": l12,
+    "13": l13,
+
     "21": l21,
     "22": l22,
+
     "31": l31,
     "32": l32
 };
