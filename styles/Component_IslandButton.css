@@ -7,21 +7,44 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    pointer-events: auto;
+    pointer-events: none;
     scroll-snap-align: start;
     z-index: 2;
 }
 
-.component-island img
+.component-island_visual
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bob 5s ease-in-out infinite;
+}
+
+.component-island_image
 {
     position: relative;
     top: 3em;
     width: 100%;
     height: auto;
     user-select: none;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.component-island_foreground
+{
+    position: absolute;
+    left: 50%;
+    bottom: -11em;
+    width: 150%;
+    height: auto;
+    transform: translateX(-50%);
+    user-select: none;
     pointer-events: none;
-    animation: bob 5s ease-in-out infinite;
+    z-index: 3;
 }
 
 @keyframes bob
@@ -49,7 +72,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
-        padding-top: clamp(20rem, 40vh, 22rem);
+        padding-top: clamp(15rem, 34vh, 19rem);
         box-sizing: border-box;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -57,13 +80,22 @@
         scale: 1 !important;
     }
 
-    .component-island img
+    .component-island_visual
+    {
+        width: min(78vw, 320px);
+    }
+
+    .component-island_image
     {
         position: relative;
         top: 0;
-        width: min(78vw, 320px);
-        max-width: min(78vw, 320px);
-        min-width: 0;
+        width: 100%;
         height: auto;
+    }
+
+    .component-island_foreground
+    {
+        width: 78%;
+        bottom: -3em;
     }
 }

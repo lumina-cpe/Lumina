@@ -45,18 +45,21 @@ export default function MenuState()
                 <div className="menu-island_container">
                     <IslandButton
                         imageSrc={"../../assets/images/island_0111.png"}
+                        foregroundSrc={"../../assets/images/foreground.png"}
                         yPos={50}
                         scale={150}
-                    />
+                    />z
 
                     <IslandButton
                         imageSrc={"../../assets/images/island_0222.png"}
+                        foregroundSrc={"../../assets/images/foreground.png"}
                         yPos={220}
                         scale={150}
                     />
 
                     <IslandButton
                         imageSrc={"../../assets/images/island_0333.png"}
+                        foregroundSrc={"../../assets/images/foreground.png"}
                         yPos={320}
                         scale={150}
                     />

@@ -10,7 +10,14 @@ import { eventEmit } from "../../events/EventBus";
 import SOUND_TYPES from "../../utils/SoundTypes";
 import { SOUND_EVENTS, SoundRequestEvent } from "../../utils/SoundEvent";
 
-export default function IslandButton({ imageSrc, yPos, scale = 100, flex = 1 })
+export default function IslandButton(
+{
+    imageSrc,
+    foregroundSrc = "",
+    yPos,
+    scale = 100,
+    flex = 1
+})
 {
     const onButtonClick = () =>
     {
@@ -25,9 +32,27 @@ export default function IslandButton({ imageSrc, yPos, scale = 100, flex = 1 })
         <div
             className="component-island"
             style={{ top: `${yPos}%`, scale: `${scale}%`, flex: `${flex}` }}
-            onClick={onButtonClick}
         >
-            <img src={imageSrc} alt="Island" />
+            <div className="component-island_visual">
+                <img
+                    className="component-island_image"
+                    src={imageSrc}
+                    alt="Island"
+                    onClick={onButtonClick}
+                    draggable="false"
+                />
+
+                {
+                    foregroundSrc && (
+                        <img
+                            className="component-island_foreground"
+                            src={foregroundSrc}
+                            alt="Foreground"
+                            draggable="false"
+                        />
+                    )
+                }
+            </div>
         </div>
     );
 }
