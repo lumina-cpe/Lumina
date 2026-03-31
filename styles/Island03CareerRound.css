@@ -3,37 +3,29 @@
 	position: relative;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: var(--ui-background);
-}
-
-.round-career_grid
-{
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 4rem;
-	width: 80%;
-	max-width: 1100px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .round-career_face
 {
+	position: absolute;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	padding: 1.5rem;
+	padding: 1rem;
 	background: var(--ui-box-primary-light);
 	border: 5px solid var(--ui-accent);
 	transition: transform 0.2s ease, opacity 0.2s ease;
+	width: 160px;
 }
 
 .round-career_face:hover
 {
-	transform: scale(1.08);
+	transform: scale(1.1);
 }
 
 .round-career_face-read
@@ -43,10 +35,10 @@
 
 .round-career_icon
 {
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	object-fit: contain;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .round-career_title
@@ -54,48 +46,5 @@
 	font-family: 'Gamer', monospace;
 	color: var(--text-inverse);
 	text-align: center;
-	font-size: 1.4rem;
-}
-
-.round-career_leave
-{
-	position: absolute;
-	bottom: 6%;
-}
-
-.round-career_popup_content
-{
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
-	max-height: 70vh;
-	overflow: hidden;
-}
-
-.round-career_popup_icon
-{
-	width: 140px;
-	height: 140px;
-	align-self: center;
-}
-
-.round-career_popup_title
-{
-	text-align: center;
-	font-family: 'Gamer', monospace;
-}
-
-.round-career_popup_section
-{
-	padding: 1rem;
-	background: var(--ui-box-primary-light);
-	border: 4px solid var(--ui-accent);
-	max-height: 120px;
-	overflow-y: auto;
-	scrollbar-width: none;
-}
-
-.round-career_popup_section::-webkit-scrollbar
-{
-	display: none;
+	font-size: 1.2rem;
 }
