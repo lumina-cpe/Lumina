@@ -1,4 +1,6 @@
-.round-questionnaire-multiple_choices, .round-questionnaire-multiple_selections {
+.round-questionnaire-multiple_choices, 
+.round-questionnaire-multiple_selections 
+{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,13 +15,17 @@
     gap: 20px;
 }
 
-.round-questionnaire-multiple_choices >:first-child, .round-questionnaire-multiple_selections >:first-child { /*TEXT BOX*/
+.round-questionnaire-multiple_choices >:first-child, 
+.round-questionnaire-multiple_selections >:first-child 
+{ /*TEXT BOX*/
     width: 100% ;
     height: 250px !important;
     padding: 30px !important;
 }
 
-.round-questionnaire-multiple_choices >:nth-child(2), .round-questionnaire-multiple_selections >:nth-child(2) { /*OPTIONS CONTAINER*/
+.round-questionnaire-multiple_choices >:nth-child(2), 
+.round-questionnaire-multiple_selections >:nth-child(2) 
+{ /*OPTIONS CONTAINER*/
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -27,7 +33,9 @@
 }
 
 /*Styling for the choices box (Forced)*/
-.round-questionnaire-multiple_choices > :nth-child(2) > *, .round-questionnaire-multiple_selections > :nth-child(2) > * {
+.round-questionnaire-multiple_choices > :nth-child(2) > *,
+ .round-questionnaire-multiple_selections > :nth-child(2) > * 
+ {
     width: 100% !important;
     height: auto !important;
     min-height: 80px;
@@ -35,75 +43,154 @@
 }
 
 @media (max-width: 768px) {
-    .questionnaire-multiple_choices,
-    .questionnaire-multiple_selections {
+    .round-questionnaire-multiple_choices,
+    .round-questionnaire-multiple_selections 
+    {
         width: 95% !important;
+        height: 85vh;
+        max-height: 650px;
         gap: 6px !important;
-        top: 60px !important;
-        transform: translateX(-50%) !important;
+        top: 55% !important;
+        transform: translate(-50%, -50%) !important;
 
-        padding-bottom: 30px !important;
+        padding-bottom: 0 !important;
+        justify-content: center !important;
     }
 
-    .questionnaire-multiple_choices >:nth-child(2),
-    .questionnaire-multiple_selections >:nth-child(2) {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 6px ;
+    .round-questionnaire-multiple_choices >:nth-child(2),
+    .round-questionnaire-multiple_selections >:nth-child(2) 
+    {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 auto;
+        gap: 8px ;
+        width: 92%;
+        margin: 0 auto;
     }
 
-    .questionnaire-multiple_choices > :first-child,
-    .questionnaire-multiple_selections > :first-child {
+    .round-questionnaire-multiple_choices > :first-child,
+    .round-questionnaire-multiple_selections > :first-child 
+    {
         height: auto !important;
-        min-height: 50px !important;
-        padding: 8px 10px !important;
+        min-height: 60px !important;
+        padding: 12px 15px !important;
         border-width: 3px !important;
+        flex: 0 0 auto;
     }
 
-    .questionnaire-multiple_choices > :first-child *,
-    .questionnaire-multiple_selections > :first-child * {
-        font-size: 0.95rem !important;
-        line-height: 0.75 !important;
+    .round-questionnaire-multiple_choices > :first-child *,
+    .round-questionnaire-multiple_selections > :first-child * 
+    {
+        font-size: clamp(0.9rem, 4vw, 1.2rem) !important;
+        line-height: 1 !important;
+        word-spacing: -2px !important;
 
         margin: 0 !important;
         padding: 0 !important;
         display: block !important;
     }
 
-    .questionnaire-multiple_choices > :nth-child(2) > *,
-    .questionnaire-multiple_selections > :nth-child(2) > * {
-        min-height: 40px ;
+    .round-questionnaire-multiple_choices > :nth-child(2) > *,
+    .round-questionnaire-multiple_selections > :nth-child(2) > * 
+    {
+        flex: 1 1 auto;
+        min-height: 30px;
+
         height: auto;
         padding: 4px 8px;
         border-width: 3px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    body .questionnaire-multiple_choices > :first-child *,
-    body .questionnaire-multiple_selections > :first-child * {
-        font-size: 18px !important;
-        line-height: 16px !important;
+    body .round-questionnaire-multiple_choices > :first-child,
+    body .round-questionnaire-multiple_choices > :first-child *,
+    body .round-questionnaire-multiple_selections > :first-child,
+    body .round-questionnaire-multiple_selections > :first-child * {
+        font-size: clamp(2.2rem, 5.5vw, 2rem) !important;
+        line-height: 1.1 !important;
+        letter-spacing: normal;
+        word-spacing: normal;
         margin: 0 !important;
-        padding: 0 !important;
-        display: block !important;
     }
 
-    body .questionnaire-multiple_choices >:nth-child(2) > * *,
-    body .questionnaire-multiple_selections >:nth-child(2) > * * {
-        font-size: 0.85rem ;
-        line-height: 1;
-        margin: 0;
+    body .round-questionnaire-multiple_choices >:nth-child(2) > * *,
+    body .round-questionnaire-multiple_selections >:nth-child(2) > * * {
+        font-size: clamp(0.75rem, 3.5vw, 1rem) !important;
+        line-height: 1.1 !important;
+        word-spacing: -1px !important;
+        margin: 0 !important;
+        display:block !important;
     } 
 
-    .questionnaire-multiple_selections-submit {
+    .round-questionnaire-multiple_selections-submit {
         margin-top: 0px;
+        flex: 0 0 auto;
     }
 
-    .questionnaire-multiple_selections-submit > * {
-        padding: 8px 30px !important;
+    .round-questionnaire-multiple_selections-submit > * {
+        padding: 8px 20px !important;
         border-width: 3px !important;
-        min-height: 40px !important;
+        min-height: 35px !important;
     }
 
-    body .questionnaire-multiple_selections-submit > * *{
-        font-size: 1.2rem !important;
+    body .round-questionnaire-multiple_selections-submit > * *{
+        font-size: 1.1rem !important;
+        line-height: 1 !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .round-questionnaire-multiple_choices,
+    .round-questionnaire-multiple_selections 
+    {
+        width: 98% !important; 
+        height: 90vh !important; 
+        gap: 8px !important; 
+    }
+
+    .round-questionnaire-multiple_choices > :first-child,
+    .round-questionnaire-multiple_selections > :first-child 
+    {
+        padding: 8px !important;
+        min-height: 40px !important;
+        margin-bottom: 10px !important; 
+    }
+
+
+    body .round-questionnaire-multiple_choices > :first-child,
+    body .round-questionnaire-multiple_choices > :first-child *,
+    body .round-questionnaire-multiple_selections > :first-child,
+    body .round-questionnaire-multiple_selections > :first-child * {
+        font-size: clamp(2rem, 4vw, 1.2rem) !important; 
+        line-height: 1 !important;
+        letter-spacing: -0.5px !important; 
+        margin: 0 !important;
+    }
+
+    .round-questionnaire-multiple_choices > :nth-child(2) > *,
+    .round-questionnaire-multiple_selections > :nth-child(2) > * {
+        padding: 2px 4px !important;
+        min-height: 35px !important;
+        border-width: 2px !important; 
+    }
+
+    body .round-questionnaire-multiple_choices >:nth-child(2) > * *,
+    body .round-questionnaire-multiple_selections >:nth-child(2) > * * {
+        font-size: 0.8rem !important; 
+        line-height: 1 !important;
+        word-spacing: -1px !important;
+    } 
+
+    .round-questionnaire-multiple_selections-submit > * {
+        padding: 4px 15px !important;
+        min-height: 30px !important;
+        border-width: 2px !important;
+    }
+
+    body .round-questionnaire-multiple_selections-submit > * * {
+        font-size: 1rem !important;
     }
 }
