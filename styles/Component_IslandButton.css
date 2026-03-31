@@ -99,3 +99,32 @@
         transform: translate(-50%, -7%);
     }
 }
+.component-island_foreground-light
+{
+    display: block;
+}
+
+.component-island_foreground-dark
+{
+    display: none;
+}
+
+[data-theme="light"] .component-island_foreground-light
+{
+    display: block;
+}
+
+[data-theme="light"] .component-island_foreground-dark
+{
+    display: none;
+}
+
+[data-theme="dark"] .component-island_foreground-light
+{
+    display: none;
+}
+
+[data-theme="dark"] .component-island_foreground-dark
+{
+    display: block;
+}

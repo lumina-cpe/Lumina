@@ -42,16 +42,25 @@ export default function IslandButton(
                     draggable="false"
                 />
 
-                {
-                    foregroundSrc && (
-                        <img
-                            className="component-island_foreground"
-                            src={foregroundSrc}
-                            alt="Foreground"
-                            draggable="false"
-                        />
-                    )
-                }
+        {
+            foregroundSrc && (
+                     <>
+                    <img
+                        className="component-island_foreground component-island_foreground-light"
+                        src={foregroundSrc}
+                        alt="Foreground light"
+                         draggable="false"
+                    />
+
+                    <img
+                        className="component-island_foreground component-island_foreground-dark"
+                        src={foregroundSrc.replace(".png", "_dark.png")}
+                        alt="Foreground dark"
+                        draggable="false"
+                     />
+                </>
+            )
+        }
             </div>
         </div>
     );
