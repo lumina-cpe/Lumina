@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 import "../../styles/MenuState.css";
 
@@ -12,14 +12,38 @@ import levelData from "../core/LevelData";
 
 import IslandPopup from "../components/menu_components/IslandPopup";
 
+import LumiDialogue from "../components/LumiDialogue";
+
 export default function MenuState()
 {
     const [ activePanel, setActivePanel ] = useState(null);
     const scrollContainerRef = useRef(null);
 
+    const [ dialoguesData, setDialoguesData ] = useState(null);
+    
+    const [ showIntro, setShowIntro ] = useState(() => {
+        return localStorage.getItem("hasSeenIntro") !== "true";
+    });
+
+    useEffect(() => {
+        fetch("/assets/data/LumiDialogue.json")
+            .then((response) => {
+                if (!response.ok) throw new Error("Could not find LumiDialogue.json");
+                return response.json();
+            })
+            .then((data) => setDialoguesData(data))
+            .catch((err) => console.error("Error loading dialogue:", err));
+    }, []);
+
+    const handleIntroComplete = () => {
+        setShowIntro(false);
+        localStorage.setItem("hasSeenIntro", "true");
+    };
+
     const progressValue = globalUserData.currentLevel > 0
         ? (globalUserData.currentLevel / Object.keys(levelData).length) * 100
         : 0;
+
     return (
         <>
             <MenuSideBar className="freeze" activePanel={activePanel} setActivePanel={setActivePanel} />
@@ -73,12 +97,22 @@ export default function MenuState()
                     />
                 </div>
 
-                <IslandPopup isActive={activePanel !== null && 
-                                        activePanel !== "achievements" &&
-                                        activePanel !== "settings" &&
-                                        activePanel !== "about us"}
-                setActive={setActivePanel} targetIsland={Number(activePanel)}></IslandPopup>
+                <IslandPopup 
+                    isActive={activePanel !== null && 
+                             activePanel !== "achievements" &&
+                             activePanel !== "settings" &&
+                             activePanel !== "about us"}
+                    setActive={setActivePanel} 
+                    targetIsland={Number(activePanel)}
+                />
             </div>
+
+            {showIntro && dialoguesData && (
+                <LumiDialogue 
+                    script={dialoguesData.intro_website} 
+                    onComplete={handleIntroComplete} 
+                />
+            )}
         </>
     );
 }
