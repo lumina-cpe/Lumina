@@ -1,4 +1,5 @@
 import ROUND_DATA from "../core/RoundData";
+import ACHIEVEMENTS from "../../assets/data/achievements.json";
 
 class LevelHandler
 {
@@ -52,6 +53,17 @@ class LevelHandler
     pushAchievement(achievement)
     {
         this.achievements.push(achievement);
+    }
+
+     collectAchievementsForLevel(levelId)
+    {
+        const newAchievements = ACHIEVEMENTS.filter(
+            a => a.level_id === levelId && !this.achievements.find(ac => ac.id === a.id)
+        );
+
+        newAchievements.forEach(a => this.pushAchievement(a));
+
+        return newAchievements;
     }
 }
 
