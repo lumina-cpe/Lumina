@@ -1,13 +1,10 @@
 import "../../styles/LevelState.css";
-
 import LevelNavigationBar from "../components/level_components/LevelNavigationBar";
-
 import { useState } from "react";
-
 import LevelHandler from "../levels/LeveHandler";
 import RoundRenderer from "../levels/RoundRenderer";
 
-export default function LevelState({ levelData })
+export default function LevelState({ levelData, onMenuReturn })
 {
     const [roundFinished, setRoundFinished] = useState(0);
     const levelHandler = new LevelHandler(levelData, roundFinished, setRoundFinished);
@@ -15,7 +12,13 @@ export default function LevelState({ levelData })
     return (
         <div className="level-container">
             <LevelNavigationBar className="level-navigation_bar" progress={ ( roundFinished / levelData.rounds_list.length ) * 100 }/>
-            <RoundRenderer className="level-round_renderer" levelHandler={ levelHandler }  setRoundFinished={ setRoundFinished }/>
+            
+            <RoundRenderer 
+                className="level-round_renderer" 
+                levelHandler={ levelHandler }  
+                setRoundFinished={ setRoundFinished }
+                onMenuReturn={ onMenuReturn } 
+            />
         </div>
     );
 }

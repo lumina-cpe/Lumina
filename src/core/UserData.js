@@ -10,7 +10,6 @@ class UserData
         this.obtainedAchievements = [];
     }
 
-
     incrementLevel() 
     {
         if (this._incrementing) return;
@@ -28,9 +27,10 @@ class UserData
 
         setTimeout(() => {
             this._incrementing = false;
-        }, 0);
+        }, 100);
 
-        console.log("user data island, ", this.currentIsland, ", ", this.currentLevel);
+        // ...and keeps your debug console.log!
+        console.log("user data island, ", this.currentIsland, " , ", this.currentLevel);
     }
 
     getCurrentLevelData()
@@ -47,7 +47,8 @@ class UserData
     {
         newAchievements.forEach((achievement) => 
         {
-            if (!this.obtainedAchievements.find(a => a.id === achievement.id)) 
+            const alreadyExists = this.obtainedAchievements.find(a => a.id === achievement.id);
+            if (!alreadyExists) 
             {
                 this.obtainedAchievements.push(achievement);
             }
