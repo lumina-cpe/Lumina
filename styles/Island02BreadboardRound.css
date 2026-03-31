@@ -1,0 +1,56 @@
+.round-island02breadboard_round
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+	overflow: hidden;
+}
+
+.round-breadboard
+{
+	position: absolute;
+	left: 80px;
+	top: 80px;
+	width: 200px;
+	height: 500px;
+	background: white;
+	border: 2px solid #ccc;
+}
+
+.round-node
+{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #bbb;
+	transform: translate(-50%, -50%);
+}
+
+.round-draggable
+{
+	position: absolute;
+	cursor: grab;
+}
+
+.round-icon
+{
+	width: 70px;
+	pointer-events: none;
+}
+
+.round-wire
+{
+	position: relative;
+	width: 80px;
+	height: 10px;
+}
+
+.round-wire_svg
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
