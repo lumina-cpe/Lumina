@@ -23,7 +23,7 @@ export default function MenuState()
 
     return (
         <>
-            <MenuSideBar className="freeze" />
+            <MenuSideBar className="freeze" activePanel={activePanel} setActivePanel={setActivePanel} />
 
             <MenuNavigationBar
                 className="freeze"

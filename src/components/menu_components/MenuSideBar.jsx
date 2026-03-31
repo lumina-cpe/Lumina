@@ -5,9 +5,8 @@ import TextButton from "../TextButton";
 import IconButton from "../IconButton";
 import PopupPanel from "../PopupPanel";
 
-export default function SideBar({ userData = { achievements: [] } })
+export default function SideBar({ activePanel, setActivePanel, userData = { achievements: [] } })
 {
-    const [activePanel, setActivePanel] = useState(null);
     const [isMobile, setIsMobile] = useState(false);
     const [achievements, setAchievements] = useState([]);
 
