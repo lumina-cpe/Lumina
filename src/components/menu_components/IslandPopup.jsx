@@ -38,7 +38,7 @@ export default function IslandPopup({ isActive = false, setActive = (val) => {},
     }
     else if(userCurrentIsland > targetIsland)
     {
-        progress = 1;
+        progress = 100;
         return (
         <PopupPanel className="component-island_popup" isActive={isActive} setActive={setActive}>
             <div className="component-island_popup-container">

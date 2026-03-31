@@ -1,6 +1,6 @@
 import l11 from "../../assets/data/l11.json";
 import l12 from "../../assets/data/l12.json";
-import l13 from "../../assets/data/l12.json"; // Formality purposes
+import l13 from "../../assets/data/l13.json";
 
 import l21 from "../../assets/data/l21.json";
 import l22 from "../../assets/data/l22.json";
