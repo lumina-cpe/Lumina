@@ -1,31 +1,31 @@
 [
   {
     "id": "01",
-    "name": "Algorithm Guru",
+    "name": "ALGORITHM GURU",
     "description": "Complete Island 2 Level 1.",
     "level_id": 21
   },
   {
     "id": "02",
-    "name": "Circuit Crusader",
+    "name": "CIRCUIT CRUSADER",
     "description": "Complete Island 2 Level 2.",
     "level_id": 22
   },
   {
     "id": "03",
-    "name": "Signal Master",
+    "name": "SIGNAL MASTER",
     "description": "Complete Island 2 Level 3.",
     "level_id": 23
   },
   {
     "id": "04",
-    "name": "Future CPE???",
+    "name": "FUTURE CPE???",
     "description": "Complete Island 2 Level 4.",
     "level_id": 24
   },
   {
     "id": "05",
-    "name": "Roadmap Revealed",
+    "name": "ROADMAP REVEALED",
     "description": "Complete Island 3 Level 1.",
     "level_id": 31
   },

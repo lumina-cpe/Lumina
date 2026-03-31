@@ -54,3 +54,179 @@ div.component-sidebar .component-sidebar-icon_buttons {
         padding-bottom: 2em;
     }
 }
+
+.component-achievements_popup
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.component-achievements_title
+{
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: var(--text-inverse);
+}
+
+.component-achievements_list
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-height: 60vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+.component-achievements_list::-webkit-scrollbar
+{
+    display: none;
+}
+.component-achievements_list
+{
+    scrollbar-width: none;
+}
+
+.component-achievements_item
+{
+    width: 90%;
+    max-width: 480px;
+    min-width: 280px;
+    padding: 25px 25px;
+    border-radius: 0;
+    border: 3px solid var(--ui-accent);
+    text-align: center; /* center text inside card */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 
+        inset 6px 6px 0px 0px rgba(255, 255, 255, 0.6),
+        inset -6px -6px 0px 0px rgba(0, 0, 0, 0.15),
+        6px 6px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+}
+
+.component-achievements_item:hover
+{
+    transform: translateY(-3px);
+}
+
+.component-achievements_item.collected
+{
+    background-color: #e0ffe0;
+    color: #006400;
+    border-color: #00b300;
+}
+
+.component-achievements_item.uncollected
+{
+    background-color: #ffe0e0;
+    color: #800000;
+    border-color: #ff4d4d;
+}
+
+.component-achievements_name
+{
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center; /* centered */
+}
+
+.component-achievements_description
+{
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.5rem;
+    text-align: center; /* centered */
+}
+
+.component-achievements_level
+{
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    text-align: center; /* centered */
+}
+
+.component-achievements_empty
+{
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #888;
+    text-align: center;
+}
+
+@media (max-width: 600px)
+{
+    .component-achievements_popup
+    {
+        padding: 10px;
+    }
+
+    .component-achievements_title
+    {
+        font-size: 2rem;
+    }
+
+    .component-achievements_name
+    {
+        font-size: 1.7rem;
+    }
+
+    .component-achievements_description
+    {
+        font-size: 1.3rem;
+    }
+
+    .component-achievements_level
+    {
+        font-size: 1rem;
+    }
+}
+
+.component-achievements_item
+{
+    position: relative; /* needed for the badge */
+}
+
+.component-achievements_badge
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-family: 'Gamer', 'Lucida Console', 'Courier New', monospace;
+    font-size: 1.1rem !important;
+    font-weight: bold;
+    padding: 1px 4px;
+    border-radius: 1px;
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.component-achievements_item.collected .component-achievements_badge
+{
+    background-color: rgba(0, 179, 0, 0.85); /* green, slightly transparent */
+    color: #ffffff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+}
+
+.component-achievements_item.uncollected .component-achievements_badge
+{
+    background-color: rgba(255, 77, 77, 0.85); /* red, slightly transparent */
+    color: #ffffff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.8);
+}
