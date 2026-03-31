@@ -1,31 +1,29 @@
 import { useEffect, useState } from "react";
-// Ensure this path perfectly matches your folder structure
 import global_UserData from "../../core/UserData"; 
-// Ensure your CSS file is actually imported so the flexbox layout applies
 import "../../../styles/CongratulationsRound.css";
 
 export default function CongratulationsRound({ levelHandler, onMenuReturn, title = "Level Complete!", subtitle = "Achievements Unlocked" }) 
 {
     const [achievements, setAchievements] = useState([]);
-    useEffect(() => {global_UserData.incrementLevel()}, []);
 
     useEffect(() => 
     {
-
-        // SAFEGUARD: Prevent crash if the parent hasn't passed the handler yet
-        if (!levelHandler) 
-        {
-            return;
-        }
+        if (!levelHandler) return;
 
         const currentLevelId = parseInt(`${global_UserData.currentIsland}${global_UserData.currentLevel}`);
         const newlyUnlocked = levelHandler.collectAchievementsForLevel(currentLevelId);
         
-        global_UserData.saveAchievements(newlyUnlocked);
-        setAchievements([...levelHandler.achievements]);
+        const obtainedAchievements = newlyUnlocked.map(achievement => ({
+            ...achievement,
+            status: "obtained"
+        }));
+        
+        global_UserData.saveAchievements(obtainedAchievements);
+        
+        setAchievements(obtainedAchievements);
+
     }, [levelHandler]);
 
-    // SAFEGUARD: Show a fallback UI instead of crashing to a white screen
     if (!levelHandler) 
     {
         return (
@@ -40,6 +38,7 @@ export default function CongratulationsRound({ levelHandler, onMenuReturn, title
     const handleDoneClick = () => 
     {
         global_UserData.incrementLevel();
+
         if (onMenuReturn) 
         {
             onMenuReturn();
@@ -55,10 +54,12 @@ export default function CongratulationsRound({ levelHandler, onMenuReturn, title
                 <button 
                     className="round-congratulations_button" 
                     onClick={handleDoneClick}
+                    style={{ position: "relative", zIndex: 9999, cursor: "pointer" }}
                 >
                     Done
                 </button>
             </div>
+            
             <div className="round-congratulations_right">
                 <h2 className="round-congratulations_subtitle">
                     {subtitle}
