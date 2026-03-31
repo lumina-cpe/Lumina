@@ -25,7 +25,7 @@ export default function QuestionnaireRound({ levelHandler })
                             {
                                 levelHandler.setNextRound();
                                 levelHandler.pushData(index);
-                                global_UserData.addIsland01Score(roundData.points[index] || 0);
+                                global_UserData.data["island_01-total_points"] += roundData.points[index] || 0;
                             }}
                         />
                     ))}
@@ -73,7 +73,7 @@ export default function QuestionnaireRound({ levelHandler })
 
                         levelHandler.setNextRound();
                         levelHandler.pushData(toggledButtons);
-                        global_UserData.addIsland01Score(points || 0);
+                        global_UserData.data["island_01-total_points"] += points || 0;
                         setToggledButtons([0, 0, 0, 0]);
                     }}
                 />
